@@ -109,7 +109,7 @@ img {
 
 @font-face {
     /*Font provided by dafont.com*/
-    /*https://www.dafont.com/savour-pinacolada.font*/
+    /*https://www.dafont.com/made-evolve-sans.font*/
     font-family: evolveLight;
     src: url('../fonts/evolve/light/evolveLight.eot'); /* IE9 Compat Modes */
     src: url('../fonts/evolve/light/evolveLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -124,7 +124,7 @@ img {
 
 @font-face {
     /*Font provided by dafont.com*/
-    /*https://www.dafont.com/savour-pinacolada.font*/
+    /*https://www.dafont.com/made-evolve-sans.font*/
     font-family: evolveBold;
     src: url('../fonts/evolve/bold/evolveBold.eot'); /* IE9 Compat Modes */
     src: url('../fonts/evolve/bold/evolveBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -164,7 +164,6 @@ img {
     #mailing {
         margin-left: -177.5px;
         width: 354px;
-        bottom: 150px;
     }
 
 }
