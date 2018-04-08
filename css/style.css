@@ -141,6 +141,7 @@ img {
     box-shadow: inset 0 0 0 5px #EF982E;
     background-color: transparent;
     color: #EF982E;
+    cursor: pointer;
 }
 
 #login:hover {
