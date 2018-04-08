@@ -9,3 +9,9 @@ function mailing() {
     window.open("#","_self")
 
 }
+
+function question() {
+
+    window.open("#","_self")
+
+}

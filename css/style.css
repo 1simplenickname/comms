@@ -88,6 +88,14 @@ img {
     margin-left: -112.5px;
 }
 
+#question {
+    right: 30px;
+    bottom: 30px;
+    background-image: url("../img/questionMarkNormal.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .orange {
     color: #EF982E;
 }
@@ -146,6 +154,10 @@ img {
 
 #login:hover {
     background-image: url("../img/keyInverted.png");
+}
+
+#question:hover {
+    background-image: url("../img/questionMarkInverted.png");
 }
 
 ::selection{
