@@ -76,7 +76,7 @@ img {
 #login {
     left: 30px;
     bottom: 30px;
-    background-image: url("../img/finalKeyNormal.png");
+    background-image: url("../img/keyNormal.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -111,11 +111,11 @@ img {
     /*Font provided by dafont.com*/
     /*https://www.dafont.com/savour-pinacolada.font*/
     font-family: evolveLight;
-    src: url('../fonts/evolve/light/evolve_light.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/evolve/light/evolve_light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/evolve/light/evolve_light.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/evolve/light/evolve_light.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/evolve/light/evolve_light.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('../fonts/evolve/light/evolveLight.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/evolve/light/evolveLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/evolve/light/evolveLight.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/evolve/light/evolveLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/evolve/light/evolveLight.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .evolveLight {
@@ -126,11 +126,11 @@ img {
     /*Font provided by dafont.com*/
     /*https://www.dafont.com/savour-pinacolada.font*/
     font-family: evolveBold;
-    src: url('../fonts/evolve/bold/evolve_bold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/evolve/bold/evolve_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/evolve/bold/evolve_bold.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/evolve/bold/evolve_bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/evolve/bold/evolve_bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url('../fonts/evolve/bold/evolveBold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/evolve/bold/evolveBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/evolve/bold/evolveBold.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/evolve/bold/evolveBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/evolve/bold/evolveBold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .evolveBold {
@@ -145,7 +145,7 @@ img {
 }
 
 #login:hover {
-    background-image: url("../img/finalKeyInverted.png");
+    background-image: url("../img/keyInverted.png");
 }
 
 ::selection{
