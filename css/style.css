@@ -165,7 +165,7 @@ img {
 @media only screen and (max-width: 320px) {
 
     #logo {
-        margin-top: 75px;
+        margin-top: 25px;
         font-size: 145px;
     }
 
