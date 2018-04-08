@@ -211,7 +211,7 @@ img {
 
 }
 
-/*iPhone 4.7" media query*/
+/*iPhone 4.7" portrait media query*/
 @media only screen and (max-width: 375px) {
 
     #logo {
@@ -227,7 +227,7 @@ img {
 
 }
 
-/*iPhone 4" media query*/
+/*iPhone 4" portrait media query*/
 @media only screen and (max-width: 320px) {
 
     #logo {
@@ -239,6 +239,21 @@ img {
         margin-left: -130px;
         width: 260px;
         bottom: 150px;
+        font-size: 65px;
+    }
+}
+
+/*iPhone 4" portrait media query*/
+@media only screen and (max-height: 320px) {
+
+    #logo {
+        margin-top: 45px;
+        font-size: 145px;
+    }
+
+    #mailing {
+        margin-left: -130px;
+        width: 260px;
         font-size: 65px;
     }
 }
