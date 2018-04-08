@@ -145,7 +145,6 @@ img {
 }
 
 #login:hover {
-    background-color: transparent;
     background-image: url("../img/finalKeyInverted.png");
 }
 
