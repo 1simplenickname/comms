@@ -13,37 +13,8 @@ img {
     bottom: 0;
 }
 
-.leftBorder, .rightBorder, .topBorder, .bottomBorder {
-    background: #EF982E;
-    position: fixed;
-}
-
-.leftBorder, .rightBorder {
-    top: 0;
-    bottom: 0;
-    width: 15px;
-}
-
-.topBorder, .bottomBorder {
-    left: 0;
-    right: 0;
-    height: 15px;
-}
-
-.leftBorder {
-    left: 0;
-}
-
-.rightBorder {
-    right: 0;
-}
-
-.topBorder {
-    top: 0;
-}
-
-.bottomBorder {
-    bottom: 0;
+.orange {
+    color: #EF982E;
 }
 
 #logo, #quote {
@@ -51,6 +22,7 @@ img {
 }
 
 #logo {
+    visibility: visible;
     margin-top: 50px;
     font-size: 750px;
 }
@@ -80,6 +52,11 @@ img {
                 background-color 600ms ease-out;
 }
 
+.centered {
+    left: 50%;
+    margin-left: -112.5px;
+}
+
 .popup {
     z-index: 5;
     position: fixed;
@@ -88,12 +65,31 @@ img {
     text-align: center;
 }
 
+.popupSmall {
+    visibility: hidden;
+    left: 30px;
+    bottom: 30px;
+    width: 255px;
+    height: 240px;
+}
+
 .popupLarge {
     visibility: hidden;
     left: 30px;
     top: 30px;
     width: 1860px;
     height: 890px;
+}
+
+.field {
+    background-color: #246d98;
+    color: #EF982E;
+    width: 225px;
+    margin-top: 15px;
+    height: 60px;
+    border: 0px;
+    font-size: 60px;
+    text-align: center;
 }
 
 #login {
@@ -114,6 +110,24 @@ img {
     margin-top: 15px;
 }
 
+#loginScreenLogin {
+
+}
+
+#loginScreenPassword {
+
+}
+
+#loginScreenRemember {
+
+}
+
+#loginScreenSubmit {
+    left: 45px;
+    margin-top: 15px;
+    width: 225px;
+}
+
 #loginScreenCross {
     right: 45px;
     top: 45px;
@@ -124,9 +138,7 @@ img {
 
 #mailing {
     width: 225px;
-    left: 50%;
     bottom: 30px;
-    margin-left: -112.5px;
 }
 
 #question {
@@ -135,10 +147,6 @@ img {
     background-image: url("../img/questionMarkNormal.png");
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.orange {
-    color: #EF982E;
 }
 
 @font-face {
@@ -260,6 +268,16 @@ img {
         bottom: 150px;
     }
 
+    #loginScreen {
+        left: 50%;
+        margin-left: -125px;
+    }
+
+    #loginScreenSubmit {
+        left: 50%;
+        margin-left: -105px;
+    }
+
 }
 
 /*iPhone 4.7" portrait media query*/
@@ -307,4 +325,39 @@ img {
         width: 260px;
         font-size: 65px;
     }
+}
+
+
+
+.leftBorder, .rightBorder, .topBorder, .bottomBorder {
+    background: #EF982E;
+    position: fixed;
+}
+
+.leftBorder, .rightBorder {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+.topBorder, .bottomBorder {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+.leftBorder {
+    left: 0;
+}
+
+.rightBorder {
+    right: 0;
+}
+
+.topBorder {
+    top: 0;
+}
+
+.bottomBorder {
+    bottom: 0;
 }

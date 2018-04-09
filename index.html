@@ -30,18 +30,40 @@
             </div>
 
                 <div id="login" class="button" onclick="login()"></div>
-                <div id="loginScreen" class="popup popupLarge">
+                <div id="loginScreen" class="popup popupSmall">
 
-                    <div id="loginScreenCross" class="button inverted"
-                         onclick="loginScreenCross()"></div>
+                    <!--<div id="loginScreenCross" class="button inverted"-->
+                         <!--onclick="loginScreenCross()"></div>-->
 
-                    <p id="loginScreenHeader" class="evolveBold">
-                        WANT TO JOIN THE REVOLUTION?
-                    </p>
+                    <!--<p id="loginScreenHeader" class="evolveBold">-->
+                        <!--EXISTING USER? LOG IN.-->
+                    <!--</p>-->
+
+                    <div id="loginScreenLogin">
+                        <input id="loginScreenLoginField" class="field evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'USER'"
+                               type="text" placeholder="USER"><br>
+                    </div>
+                    <div id="loginScreenPassword">
+                        <input id="loginScreenPasswordField" class="field evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'PASS'"
+                               type="text" placeholder="PASS"><br>
+                    </div>
+                    <!--<div id="loginScreenRemember"></div>-->
+                    <div id="loginScreenSubmit" class="button inverted"
+                         onclick="loginScreenSubmit()">
+
+                        <span class="evolveBold">
+                            LOGIN
+                        </span>
+
+                    </div>
 
                 </div>
 
-                <div id="mailing" class="button" onclick="mailing()">
+                <div id="mailing" class="button centered" onclick="mailing()">
                 
                     <span class="evolveBold">
                         SIGN UP
