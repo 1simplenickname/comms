@@ -73,10 +73,51 @@ img {
                 background-color 600ms ease-out;
 }
 
+.inverted {
+    background-color: #246d98;
+    color: #EF982E;
+    transition: box-shadow 600ms ease-out,
+                background-color 600ms ease-out;
+}
+
+.popup {
+    z-index: 5;
+    position: fixed;
+    background-color: #EF982E;
+    color: #246d98;
+    text-align: center;
+}
+
+.popupLarge {
+    visibility: hidden;
+    left: 30px;
+    top: 30px;
+    width: 1860px;
+    height: 890px;
+}
+
 #login {
     left: 30px;
     bottom: 30px;
     background-image: url("../img/keyNormal.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#loginScreen {
+
+}
+
+#loginScreenHeader {
+    color: #246d98;
+    font-size: 60px;
+    margin-top: 15px;
+}
+
+#loginScreenCross {
+    right: 45px;
+    top: 45px;
+    background-image: url("../img/crossInverted.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -152,12 +193,22 @@ img {
     cursor: pointer;
 }
 
+.inverted:hover {
+    box-shadow: inset 0 0 0 5px #246d98;
+    background-color: transparent;
+    color: #246d98;
+}
+
 #login:hover {
     background-image: url("../img/keyInverted.png");
 }
 
 #question:hover {
     background-image: url("../img/questionMarkInverted.png");
+}
+
+#loginScreenCross:hover {
+    background-image: url("../img/crossNormal.png");
 }
 
 ::selection{
