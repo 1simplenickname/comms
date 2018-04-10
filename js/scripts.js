@@ -5,11 +5,6 @@ function login() {
     document.getElementById("loginScreen").style.visibility = "visible";
 }
 
-// function loginScreenCross() {
-//     document.getElementById("loginScreen").style.visibility = "hidden";
-//     document.getElementById("logo").style.visibility = "visible";
-// }
-
 function loginScreenSubmit() {
     document.getElementById("loginScreen").style.visibility = "hidden";
     document.getElementById("login").style.visibility = "visible";
