@@ -361,9 +361,3 @@ img {
 .bottomBorder {
     bottom: 0;
 }
-
-.field {
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
-}
