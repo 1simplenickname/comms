@@ -23,7 +23,7 @@
 
             <div id="logo" class="orange">
 
-                <h1 class="comms logo">
+                <h1 class="comms logo notSelectable">
                     Comms
                 </h1>
 
@@ -32,13 +32,13 @@
                 <div id="login" class="button" onclick="login()"></div>
                 <div id="loginScreen" class="popup popupSmall">
 
-                    <div id="loginScreenLogin">
+                    <div id="loginScreenLogin" class="notSelectable">
                         <input id="loginScreenLoginField" class="field evolveBold"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'USER'"
                                type="text" placeholder="USER"><br>
                     </div>
-                    <div id="loginScreenPassword">
+                    <div id="loginScreenPassword" class="notSelectable">
                         <input id="loginScreenPasswordField" class="field evolveBold"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'PASS'"
@@ -48,7 +48,7 @@
                     <div id="loginScreenSubmit" class="button inverted"
                          onclick="loginScreenSubmit()">
 
-                        <span class="evolveBold">
+                        <span class="evolveBold notSelectable">
                             LOGIN
                         </span>
 
@@ -58,9 +58,16 @@
 
                 <div id="mailing" class="button centered" onclick="mailing()">
                 
-                    <span class="evolveBold">
+                    <span class="evolveBold notSelectable">
                         SIGN UP
                     </span>
+
+                </div>
+
+                <div id="mailingScreen" class="popup popupLarge">
+
+                    <div id="mailingScreenCross" class="button inverted"
+                         onclick="mailingScreenCross()"></div>
 
                 </div>
 
