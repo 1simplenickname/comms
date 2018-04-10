@@ -90,6 +90,10 @@ img {
     border: 0px;
     font-size: 60px;
     text-align: center;
+    /*Fix for iOS' Safari input field styling:*/
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 #login {
@@ -102,12 +106,6 @@ img {
 
 #loginScreen {
 
-}
-
-#loginScreenHeader {
-    color: #246d98;
-    font-size: 60px;
-    margin-top: 15px;
 }
 
 #loginScreenLogin {
@@ -126,14 +124,6 @@ img {
     left: 45px;
     margin-top: 15px;
     width: 225px;
-}
-
-#loginScreenCross {
-    right: 45px;
-    top: 45px;
-    background-image: url("../img/crossInverted.png");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #mailing {
@@ -213,10 +203,6 @@ img {
 
 #question:hover {
     background-image: url("../img/questionMarkInverted.png");
-}
-
-#loginScreenCross:hover {
-    background-image: url("../img/crossNormal.png");
 }
 
 ::selection{
@@ -360,10 +346,4 @@ img {
 
 .bottomBorder {
     bottom: 0;
-}
-
-.field {
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
 }
