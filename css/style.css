@@ -365,4 +365,5 @@ img {
 .field {
     -webkit-appearance: none;
     border-radius: 0;
+    padding: 0;
 }
