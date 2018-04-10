@@ -76,8 +76,6 @@ img {
 
 .popupSmall {
     visibility: hidden;
-    left: 30px;
-    bottom: 30px;
     width: 255px;
     height: 240px;
     animation: zeroToHero 3000ms;
@@ -115,10 +113,11 @@ img {
 }
 
 #loginScreen {
-
+    left: 30px;
+    bottom: 30px;
 }
 
-#loginScreenLogin {
+#loginScreenUser {
 
 }
 
@@ -136,14 +135,39 @@ img {
     width: 225px;
 }
 
-#mailing {
+#signup {
     width: 225px;
     bottom: 30px;
 }
 
-#mailingScreen {
+#signupScreen {
     visibility: visible;
     /*visibility: hidden;*/
+    height: 315px;
+    bottom: 30px;
+}
+
+#mailingScreenHeader {
+    margin-top: 15px;
+    font-size: 55px;
+}
+
+#signupScreenUser {
+
+}
+
+#signupScreenPassword {
+
+}
+
+#signupScreenPasswordRepeat {
+
+}
+
+#signupScreenSubmit {
+    margin-top: 15px;
+    width: 225px;
+    margin-left: -97.5px;
 }
 
 #mailingScreenCross {
@@ -245,7 +269,7 @@ img {
         font-size: 500px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -177.5px;
         width: 354px;
     }
@@ -260,7 +284,7 @@ img {
         font-size: 375px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -177.5px;
         width: 354px;
     }
@@ -275,7 +299,7 @@ img {
         font-size: 190px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -177.5px;
         width: 354px;
         bottom: 150px;
@@ -301,7 +325,7 @@ img {
         font-size: 170px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -157.5px;
         width: 315px;
         bottom: 150px;
@@ -317,7 +341,7 @@ img {
         font-size: 145px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -130px;
         width: 260px;
         bottom: 150px;
@@ -333,7 +357,7 @@ img {
         font-size: 145px;
     }
 
-    #mailing {
+    #signup {
         margin-left: -130px;
         width: 260px;
         font-size: 65px;

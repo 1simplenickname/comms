@@ -32,14 +32,16 @@
                 <div id="login" class="button" onclick="login()"></div>
                 <div id="loginScreen" class="popup popupSmall">
 
-                    <div id="loginScreenLogin" class="notSelectable">
-                        <input id="loginScreenLoginField" class="field evolveBold"
+                    <div id="loginScreenUser" class="notSelectable">
+                        <input id="loginScreenLoginField"
+                               class="field notSelectable evolveBold"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'USER'"
                                type="text" placeholder="USER"><br>
                     </div>
                     <div id="loginScreenPassword" class="notSelectable">
-                        <input id="loginScreenPasswordField" class="field evolveBold"
+                        <input id="loginScreenPasswordField"
+                               class="field notSelectable evolveBold"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'PASS'"
                                type="password" placeholder="PASS"><br>
@@ -56,7 +58,7 @@
 
                 </div>
 
-                <div id="mailing" class="button centered" onclick="mailing()">
+                <div id="signup" class="button centered" onclick="signup()">
                 
                     <span class="evolveBold notSelectable">
                         SIGN UP
@@ -64,10 +66,33 @@
 
                 </div>
 
-                <div id="mailingScreen" class="popup popupLarge">
+                <div id="signupScreen" class="popup popupSmall centered">
 
-                    <div id="mailingScreenCross" class="button inverted"
-                         onclick="mailingScreenCross()"></div>
+                    <div id="signupScreenUser" class="notSelectable">
+                        <input id="signupScreenUserField"
+                               class="field notSelectable evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'USER'" type="text"
+                               placeholder="USER">
+                    </div>
+                    <div id="signupScreenPassword" class="notSelectable">
+                        <input id="signupScreenPasswordField"
+                               class="field notSelectable evolveBold"
+                               onchange="passwordMatch()" onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'PASS'" type="password"
+                               placeholder="PASS">
+                    </div>
+                    <div id="signupScreenPasswordRepeat" class="notSelectable">
+                        <input id="signupScreenPasswordRepeatField"
+                               class="field notSelectable evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'AGAIN'"
+                               type="password" placeholder="AGAIN">
+                    </div>
+                    <div id="signupScreenSubmit" onclick="signupScreenClose()"
+                         class="button inverted centered notSelectable evolveBold">
+                        SIGN UP
+                    </div>
 
                 </div>
 
