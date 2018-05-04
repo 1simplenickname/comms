@@ -33,17 +33,18 @@ function question() {
 function passwordStrength() {
     let password = document.getElementById("signupScreenPasswordField");
     let strength = 0;
-
+    // checks if the password contains any alphanumerical characters and/or numbers
     if  (password.value.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)) {
         strength += 1
     }
+    // checks if the password contains any special characters
     if (password.value.match(/[!?@£$%^&*()~<>]+/)) {
         strength += 1
     }
+    // checks if the password is longer than 5 characters
     if (password.value.length > 5) {
         strength += 1
     }
-
     switch(strength) {
         // very weak password
         case 0:
