@@ -141,8 +141,8 @@ img {
 }
 
 #signupScreen {
-    visibility: visible;
-    /*visibility: hidden;*/
+    /*visibility: visible;*/
+    visibility: hidden;
     height: 315px;
     bottom: 30px;
 }
