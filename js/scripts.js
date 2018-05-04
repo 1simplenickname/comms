@@ -19,16 +19,6 @@ function signup() {
     document.getElementById("signupScreen").style.visibility = "visible";
 }
 
-function passwordMatch() {
-    let password = $("#signupScreenPasswordField").value;
-    let passwordRepeat = $("#signupScreenPasswordRepeatField").value;
-
-    if (password != passwordRepeat)
-        document.getElementById("signupScreenPasswordField").style.color = "red";
-    else
-        document.getElementById("signupScreenPasswordField").style.color = "green";
-}
-
 function signupScreenClose() {
     document.getElementById("signupScreen").style.visibility = "hidden";
     document.getElementById("login").style.visibility = "visible";
@@ -40,6 +30,42 @@ function question() {
     window.open("#","_self")
 }
 
-$(document).ready(function () {
-    $("#signupScreenPasswordField, #signupScreenPasswordRepeatField").keyup(passwordMatch);
-});
+// function passwordStrength() {
+//     let password = String(document.getElementById("signupScreenPasswordField"));
+//     let passwordField = document.getElementById("signupScreenPasswordField");
+//     let passwordRepeatField = document.getElementById("signupScreenPasswordRepeatField");
+//     let strength = 0;
+//
+//     if  (password.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)) {
+//         strength += 1;
+//     }
+//     if (password.match(/[!?@£$%^&*()~<>]+/)) {
+//         strength += 1;
+//     }
+//     if (password.length > 6) {
+//         strength += 1;
+//     }
+//
+//     switch(strength) {
+//         // very weak password
+//         case 0:
+//             passwordField.style.color = "red";
+//             passwordRepeatField.style.color = "red";
+//             break;
+//         // weak password
+//         case 1:
+//             passwordField.style.color = "orange";
+//             passwordRepeatField.style.color = "orange";
+//             break;
+//         // strong password
+//         case 2:
+//             passwordField.style.color = "yellow";
+//             passwordRepeatField.style.color = "yellow";
+//             break;
+//         // very strong password
+//         case 3:
+//             passwordField.style.color = "green";
+//             passwordRepeatField.style.color = "green";
+//             break;
+//     }
+// }

@@ -71,23 +71,24 @@
                     <div id="signupScreenUser" class="notSelectable">
                         <input id="signupScreenUserField"
                                class="field notSelectable evolveBold"
+                               type="text" placeholder="USER"
                                onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'USER'" type="text"
-                               placeholder="USER">
+                               onblur="this.placeholder = 'USER'" >
                     </div>
                     <div id="signupScreenPassword" class="notSelectable">
                         <input id="signupScreenPasswordField"
                                class="field notSelectable evolveBold"
-                               onchange="passwordMatch()" onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'PASS'" type="password"
-                               placeholder="PASS">
+                               type="text" placeholder="PASS"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'PASS'"
+                               onkeyup="passwordStrength()">
                     </div>
                     <div id="signupScreenPasswordRepeat" class="notSelectable">
                         <input id="signupScreenPasswordRepeatField"
                                class="field notSelectable evolveBold"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'AGAIN'"
-                               type="password" placeholder="AGAIN">
+                               type="text" placeholder="AGAIN"
+                               onfocus="this.placeholder=''"
+                               onblur="this.placeholder='AGAIN'">
                     </div>
                     <div id="signupScreenSubmit" onclick="signupScreenClose()"
                          class="button inverted centered notSelectable evolveBold">
