@@ -364,7 +364,11 @@ img {
     }
 }
 
-
+/*Fix for placeholder text on Apple devices*/
+::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+    color: #EF982E;
+    opacity: 0.5;
+}
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
     background: #EF982E;
