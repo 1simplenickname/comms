@@ -81,14 +81,15 @@
                                type="password" placeholder="PASS"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'PASS'"
-                               onkeyup="passwordStrength()">
+                               onkeyup="passwordStrength(); passwordMatch()">
                     </div>
                     <div id="signupScreenPasswordRepeat" class="notSelectable">
                         <input id="signupScreenPasswordRepeatField"
                                class="field notSelectable evolveBold"
                                type="password" placeholder="AGAIN"
                                onfocus="this.placeholder=''"
-                               onblur="this.placeholder='AGAIN'">
+                               onblur="this.placeholder='AGAIN'"
+                               onkeyup="passwordMatch()">
                     </div>
                     <div id="signupScreenSubmit" onclick="signupScreenClose()"
                          class="button inverted centered notSelectable evolveBold">

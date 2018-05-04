@@ -64,3 +64,13 @@ function passwordStrength() {
             break;
     }
 }
+
+function passwordMatch() {
+    let password = document.getElementById("signupScreenPasswordField");
+    let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
+    if (password.value !== passwordRepeat.value) {
+        passwordRepeat.style.color = "#EF2E2E";
+    } else {
+        passwordRepeat.style.color = "#24B936";
+    }
+}
