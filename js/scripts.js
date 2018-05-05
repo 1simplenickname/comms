@@ -73,10 +73,14 @@ function passwordMatch() {
         passwordRepeat.style.color = "#EF2E2E";
     } else {
         passwordRepeat.style.color = "#24B936";
-        if (event.keyCode === 13) {
-            signupScreenSubmit();
-        }
+        signupScreenEnter();
         submitButton.onclick = function () {signupScreenSubmit()};
+    }
+}
+
+function signupScreenEnter() {
+    if (event.keyCode === 13) {
+        signupScreenSubmit();
     }
 }
 
