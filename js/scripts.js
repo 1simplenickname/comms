@@ -95,7 +95,7 @@ function passwordStrength() {
             break;
         // strong password
         case 4:
-            password.style.color = "#DFAF2B";
+            password.style.color = "#EED82E";
             shape.className = "hexagon";
             classification.style.lineHeight = "60px";
             classification.innerHTML = "STRONG";

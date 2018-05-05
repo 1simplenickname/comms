@@ -195,7 +195,7 @@ img {
 }
 
 .hexagon {
-    background-color: #DFAF2B;
+    background-color: #EED82E;
     -webkit-clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
     clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
     transition: all 1000ms ease-in-out;
