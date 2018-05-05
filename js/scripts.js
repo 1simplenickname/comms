@@ -60,14 +60,18 @@ function passwordMatch() {
     let submitButton = document.getElementById("signupScreenSubmit");
     if (password.value !== passwordRepeat.value) {
         passwordRepeat.style.color = "#EF2E2E";
-        submitButton.onclick = "";
+        submitButton.onclick = function () {signupScreenSubmitFalse()};
     } else {
         passwordRepeat.style.color = "#24B936";
-        submitButton.onclick = function () {signupScreenClose()}
+        submitButton.onclick = function () {signupScreenSubmitTrue()};
     }
 }
 
-function signupScreenClose() {
+function signupScreenSubmitFalse() {
+
+}
+
+function signupScreenSubmitTrue() {
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("signup").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
