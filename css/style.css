@@ -48,7 +48,7 @@ img {
 .inverted {
     background-color: #246d98;
     color: #EF982E;
-    transition: box-shadow 600ms ease-out,
+    transition: box-shadowa 600ms ease-out,
                 background-color 600ms ease-out;
 }
 
@@ -375,11 +375,11 @@ img {
 
 }
 
-/*Fix for placeholder text on Apple devices*/
-::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
-    color: #EF982E;
-    opacity: 0.5;
-}
+/*!*Fix for placeholder text on Apple devices*!*/
+/*::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {*/
+    /*color: #EF982E;*/
+    /*opacity: 0.5;*/
+/*}*/
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
     background: #EF982E;
