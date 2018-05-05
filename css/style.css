@@ -375,6 +375,11 @@ img {
 
 }
 
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder,
+:-ms-input-placeholder, ::-ms-input-placeholder {
+    text-align: center;
+}
+
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
     background: #EF982E;
     position: fixed;
