@@ -45,6 +45,9 @@ function passwordStrength() {
     if (password.value.length > 5) {
         strength += 1
     }
+    if (password.value.length > 7) {
+        strength += 1
+    }
     switch(strength) {
         // very weak password
         case 0:
@@ -68,11 +71,26 @@ function passwordStrength() {
 function passwordMatch() {
     let password = document.getElementById("signupScreenPasswordField");
     let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
-    let submitButton = document.getElementById("signupScreenSubmit");
     if (password.value !== passwordRepeat.value) {
         passwordRepeat.style.color = "#EF2E2E";
     } else {
         passwordRepeat.style.color = "#24B936";
+            cantBeBlank();
+    }
+}
+
+function cantBeBlank() {
+    let username = document.getElementById("signupScreenUsernameField");
+    let password = document.getElementById("signupScreenPasswordField");
+    let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
+    let submitButton = document.getElementById("signupScreenSubmit");
+    if (username.value === null || username.value === "",
+        password.value === null || password.value === "",
+        passwordRepeat.value === null || passwordRepeat.value === "") {
+        // do nothing
+    } else if (password.value.length < 6){
+        // do nothing
+    } else {
         signupScreenEnter();
         submitButton.onclick = function () {signupScreenSubmit()};
     }
@@ -95,8 +113,4 @@ function signupScreenSubmit() {
 
 function question() {
     window.open("#","_self")
-}
-
-function signupScreen() {
-    let username = document.getElementById("signupScreenUsername");
 }
