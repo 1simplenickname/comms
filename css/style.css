@@ -48,7 +48,7 @@ img {
 .inverted {
     background-color: #246d98;
     color: #EF982E;
-    transition: box-shadowa 600ms ease-out,
+    transition: box-shadow 600ms ease-out,
                 background-color 600ms ease-out;
 }
 
@@ -152,6 +152,76 @@ img {
 
 #recruitScreenPassword {
 
+}
+
+#strengthMeter {
+    visibility: hidden;
+    z-index: 2;
+    position: absolute;
+    background-color: #EF982E;
+    margin-top: -60px;
+    width: 225px;
+    height: 60px;
+    box-shadow: none;
+}
+
+#strengthMeterShapes {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.none {
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+}
+
+.triangle {
+    width: 55px;
+    height: 55px;
+    background-color: #EF2E2E;
+    -webkit-clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
+    transition: all 1000ms ease-in-out;
+}
+
+.square {
+    background-color: #EF7E2E;
+    -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: all 1000ms ease-in-out;
+}
+
+.hexagon {
+    background-color: #DFAF2B;
+    -webkit-clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
+    clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
+    transition: all 1000ms ease-in-out;
+}
+
+.circle {
+    background-color: #24B936;
+    border-radius: 50%;
+    transition: all 1000ms ease-in-out;
+}
+
+#strengthMeterClassification {
+    float: left;
+    width: 165px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#strengthMeterContent {
+    width: 165px;
+    height: 60px;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    color: #246d98;
 }
 
 #recruitScreenPasswordRepeat {

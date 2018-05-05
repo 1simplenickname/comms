@@ -82,8 +82,10 @@
                             <input id="recruitScreenPasswordField"
                                    class="field notSelectable evolveBold"
                                    type="password" placeholder="PASS"
-                                   onfocus="this.placeholder =''"
-                                   onblur="this.placeholder = 'PASS'"
+                                   onfocus="strengthMeterShow();
+                                            this.placeholder =''"
+                                   onblur="strengthMeterHide();
+                                           this.placeholder = 'PASS'"
                                    onkeyup="passwordStrength(); passwordMatch()">
                         </div>
                         <div id="recruitScreenPasswordRepeat" class="notSelectable">
@@ -93,6 +95,17 @@
                                    onfocus="this.placeholder=''"
                                    onblur="this.placeholder='AGAIN'"
                                    onkeyup="passwordMatch()">
+                        </div>
+                        <div id="strengthMeter"
+                             class="notSelectable centered">
+                            <div id="strengthMeterShapes"
+                                 class="notSelectable triangle"></div>
+                            <div id="strengthMeterClassification"
+                                 class="notSelectable">
+                                <div id="strengthMeterContent" class="evolveBold">
+                                    VERY<br>WEAK
+                                </div>
+                            </div>
                         </div>
                         <div id="recruitScreenSubmit"
                              class="button inverted centered notSelectable evolveBold">
