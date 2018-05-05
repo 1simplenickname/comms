@@ -12,12 +12,12 @@ function loginScreenEnter() {
 }
 
 function loginScreenSubmit() {
-        let loginScreen = document.getElementById("loginScreenForm");
-        document.getElementById("login").style.visibility = "visible";
-        document.getElementById("recruit").style.visibility = "visible";
-        document.getElementById("question").style.visibility = "visible";
-        document.getElementById("loginScreen").style.visibility = "hidden";
-        loginScreen.reset();
+    let loginScreen = document.getElementById("loginScreenForm");
+    document.getElementById("login").style.visibility = "visible";
+    document.getElementById("recruit").style.visibility = "visible";
+    document.getElementById("question").style.visibility = "visible";
+    document.getElementById("loginScreen").style.visibility = "hidden";
+    loginScreen.reset();
 }
 
 function recruit() {
@@ -33,13 +33,13 @@ function passwordStrength() {
     if  (password.value.match(/[a-z][a-z]+/)) {
         strength += 1
     }
-    if  (password.value.match(/[A-Z]+/)) {
+    if  (password.value.match(/[A-Z][A-Z]+/)) {
         strength += 1
     }
-    if  (password.value.match(/[0-9]+/)) {
+    if  (password.value.match(/[0-9][0-9]+/)) {
         strength += 1
     }
-    if (password.value.match(/[!?@£$%^&*()~<>]+/)) {
+    if (password.value.match(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/)) {
         strength += 1
     }
     if (password.value.length > 5) {
@@ -58,11 +58,11 @@ function passwordStrength() {
             password.style.color = "#EF7E2E";
             break;
         // strong password
-        case 3:
+        case 4:
             password.style.color = "#DFAF2B";
             break;
         // very strong password
-        case 4:
+        case 6:
             password.style.color = "#24B936";
             break;
     }
