@@ -160,6 +160,7 @@ img {
     position: absolute;
     background-color: #EF982E;
     margin-top: -60px;
+    margin-left: -112.5px;
     width: 225px;
     height: 60px;
     box-shadow: none;
@@ -442,7 +443,6 @@ img {
         width: 260px;
         font-size: 65px;
     }
-
 }
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
