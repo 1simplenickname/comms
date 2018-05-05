@@ -39,22 +39,20 @@
                                    class="field notSelectable evolveBold"
                                    onfocus="this.placeholder =''"
                                    onblur="this.placeholder = 'USER'"
-                                   type="text" placeholder="USER"><br>
+                                   type="text" placeholder="USER">
                         </div>
                         <div id="loginScreenPassword" class="notSelectable">
                             <input id="loginScreenPasswordField"
                                    class="field notSelectable evolveBold"
                                    onfocus="this.placeholder =''"
                                    onblur="this.placeholder = 'PASS'"
-                                   type="password" placeholder="PASS"><br>
+                                   type="password" placeholder="PASS"
+                                   onkeydown="loginScreenEnter()">
                         </div>
-                        <div id="loginScreenSubmit" class="button inverted"
+                        <div id="loginScreenSubmit"
+                             class="button inverted notSelectable evolveBold"
                              onclick="loginScreenSubmit()">
-
-                            <span class="evolveBold notSelectable">
                                 LOGIN
-                            </span>
-
                         </div>
 
                     </form>
