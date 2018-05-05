@@ -6,10 +6,12 @@ function login() {
 }
 
 function loginScreenSubmit() {
+    let loginScreen = document.getElementById("loginScreenForm");
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("signup").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
     document.getElementById("loginScreen").style.visibility = "hidden";
+    loginScreen.reset();
 }
 
 function signup() {
@@ -67,10 +69,12 @@ function passwordMatch() {
 }
 
 function signupScreenSubmit() {
+    let submitScreen = document.getElementById("signupScreenForm");
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("signup").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
     document.getElementById("signupScreen").style.visibility = "hidden";
+    submitScreen.reset();
 }
 
 function question() {

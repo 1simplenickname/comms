@@ -32,28 +32,32 @@
                 <div id="login" class="button" onclick="login()"></div>
                 <div id="loginScreen" class="popup popupSmall">
 
-                    <div id="loginScreenUser" class="notSelectable">
-                        <input id="loginScreenLoginField"
-                               class="field notSelectable evolveBold"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'USER'"
-                               type="text" placeholder="USER"><br>
-                    </div>
-                    <div id="loginScreenPassword" class="notSelectable">
-                        <input id="loginScreenPasswordField"
-                               class="field notSelectable evolveBold"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'PASS'"
-                               type="password" placeholder="PASS"><br>
-                    </div>
-                    <div id="loginScreenSubmit" class="button inverted"
-                         onclick="loginScreenSubmit()">
+                    <form id="loginScreenForm">
 
-                        <span class="evolveBold notSelectable">
-                            LOGIN
-                        </span>
+                        <div id="loginScreenUser" class="notSelectable">
+                            <input id="loginScreenLoginField"
+                                   class="field notSelectable evolveBold"
+                                   onfocus="this.placeholder =''"
+                                   onblur="this.placeholder = 'USER'"
+                                   type="text" placeholder="USER"><br>
+                        </div>
+                        <div id="loginScreenPassword" class="notSelectable">
+                            <input id="loginScreenPasswordField"
+                                   class="field notSelectable evolveBold"
+                                   onfocus="this.placeholder =''"
+                                   onblur="this.placeholder = 'PASS'"
+                                   type="password" placeholder="PASS"><br>
+                        </div>
+                        <div id="loginScreenSubmit" class="button inverted"
+                             onclick="loginScreenSubmit()">
 
-                    </div>
+                            <span class="evolveBold notSelectable">
+                                LOGIN
+                            </span>
+
+                        </div>
+
+                    </form>
 
                 </div>
 
@@ -67,33 +71,37 @@
 
                 <div id="signupScreen" class="popup popupSmall centered">
 
-                    <div id="signupScreenUser" class="notSelectable">
-                        <input id="signupScreenUserField"
-                               class="field notSelectable evolveBold"
-                               type="text" placeholder="USER"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'USER'" >
-                    </div>
-                    <div id="signupScreenPassword" class="notSelectable">
-                        <input id="signupScreenPasswordField"
-                               class="field notSelectable evolveBold"
-                               type="password" placeholder="PASS"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'PASS'"
-                               onkeyup="passwordStrength(); passwordMatch()">
-                    </div>
-                    <div id="signupScreenPasswordRepeat" class="notSelectable">
-                        <input id="signupScreenPasswordRepeatField"
-                               class="field notSelectable evolveBold"
-                               type="password" placeholder="AGAIN"
-                               onfocus="this.placeholder=''"
-                               onblur="this.placeholder='AGAIN'"
-                               onkeyup="passwordMatch()">
-                    </div>
-                    <div id="signupScreenSubmit"
-                         class="button inverted centered notSelectable evolveBold">
-                        SIGN UP
-                    </div>
+                    <form id="signupScreenForm">
+
+                        <div id="signupScreenUser" class="notSelectable">
+                            <input id="signupScreenUserField"
+                                   class="field notSelectable evolveBold"
+                                   type="text" placeholder="USER"
+                                   onfocus="this.placeholder =''"
+                                   onblur="this.placeholder = 'USER'" >
+                        </div>
+                        <div id="signupScreenPassword" class="notSelectable">
+                            <input id="signupScreenPasswordField"
+                                   class="field notSelectable evolveBold"
+                                   type="password" placeholder="PASS"
+                                   onfocus="this.placeholder =''"
+                                   onblur="this.placeholder = 'PASS'"
+                                   onkeyup="passwordStrength(); passwordMatch()">
+                        </div>
+                        <div id="signupScreenPasswordRepeat" class="notSelectable">
+                            <input id="signupScreenPasswordRepeatField"
+                                   class="field notSelectable evolveBold"
+                                   type="password" placeholder="AGAIN"
+                                   onfocus="this.placeholder=''"
+                                   onblur="this.placeholder='AGAIN'"
+                                   onkeyup="passwordMatch()">
+                        </div>
+                        <div id="signupScreenSubmit"
+                             class="button inverted centered notSelectable evolveBold">
+                            SIGN UP
+                        </div>
+
+                    </form>
 
                 </div>
 
