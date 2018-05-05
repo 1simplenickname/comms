@@ -58,12 +58,12 @@ img {
 }
 
 .notSelectable {
-    /*-webkit-touch-callout: none;*/
-    /*-webkit-user-select: none;*/
-    /*-khtml-user-select: none;*/
-    /*-moz-user-select: none;*/
-    /*-ms-user-select: none;*/
-    /*user-select: none;*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .popup {
@@ -374,12 +374,6 @@ img {
     }
 
 }
-
-/*!*Fix for placeholder text on Apple devices*!*/
-/*::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {*/
-    /*color: #EF982E;*/
-    /*opacity: 0.5;*/
-/*}*/
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
     background: #EF982E;
