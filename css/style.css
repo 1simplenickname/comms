@@ -135,30 +135,30 @@ img {
     width: 225px;
 }
 
-#signup {
+#recruit {
     width: 225px;
     bottom: 30px;
 }
 
-#signupScreen {
+#recruitScreen {
     visibility: hidden;
     height: 315px;
     bottom: 30px;
 }
 
-#signupScreenUsername {
+#recruitScreenUsername {
 
 }
 
-#signupScreenPassword {
+#recruitScreenPassword {
 
 }
 
-#signupScreenPasswordRepeat {
+#recruitScreenPasswordRepeat {
 
 }
 
-#signupScreenSubmit {
+#recruitScreenSubmit {
     margin-top: 15px;
     margin-left: -97.5px;
     width: 225px;
@@ -263,12 +263,12 @@ img {
         font-size: 500px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -177.5px;
         width: 354px;
     }
 
-    #signupScreenSubmit {
+    #recruitScreenSubmit {
         margin-left: -107.5px;
     }
 
@@ -286,7 +286,7 @@ img {
         font-size: 375px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -177.5px;
         width: 354px;
     }
@@ -301,7 +301,7 @@ img {
         font-size: 190px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -177.5px;
         width: 354px;
         bottom: 150px;
@@ -327,7 +327,7 @@ img {
         font-size: 170px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -157.5px;
         width: 315px;
         bottom: 150px;
@@ -343,18 +343,18 @@ img {
         font-size: 145px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -130px;
         width: 260px;
         bottom: 150px;
         font-size: 65px;
     }
 
-    #signupScreen {
+    #recruitScreen {
         margin-left: -127.5px;
     }
 
-    #signupScreenSubmit {
+    #recruitScreenSubmit {
         margin-left: -112.5px;
     }
 }
@@ -367,7 +367,7 @@ img {
         font-size: 145px;
     }
 
-    #signup {
+    #recruit {
         margin-left: -130px;
         width: 260px;
         font-size: 65px;

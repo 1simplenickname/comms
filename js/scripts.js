@@ -1,6 +1,6 @@
 function login() {
     document.getElementById("login").style.visibility = "hidden";
-    document.getElementById("signup").style.visibility = "hidden";
+    document.getElementById("recruit").style.visibility = "hidden";
     document.getElementById("question").style.visibility = "hidden";
     document.getElementById("loginScreen").style.visibility = "visible";
 }
@@ -14,21 +14,21 @@ function loginScreenEnter() {
 function loginScreenSubmit() {
         let loginScreen = document.getElementById("loginScreenForm");
         document.getElementById("login").style.visibility = "visible";
-        document.getElementById("signup").style.visibility = "visible";
+        document.getElementById("recruit").style.visibility = "visible";
         document.getElementById("question").style.visibility = "visible";
         document.getElementById("loginScreen").style.visibility = "hidden";
         loginScreen.reset();
 }
 
-function signup() {
+function recruit() {
     document.getElementById("login").style.visibility = "hidden";
-    document.getElementById("signup").style.visibility = "hidden";
+    document.getElementById("recruit").style.visibility = "hidden";
     document.getElementById("question").style.visibility = "hidden";
-    document.getElementById("signupScreen").style.visibility = "visible";
+    document.getElementById("recruitScreen").style.visibility = "visible";
 }
 
 function passwordStrength() {
-    let password = document.getElementById("signupScreenPasswordField");
+    let password = document.getElementById("recruitScreenPasswordField");
     let strength = 0;
     if  (password.value.match(/[a-z][a-z]+/)) {
         strength += 1
@@ -69,8 +69,8 @@ function passwordStrength() {
 }
 
 function passwordMatch() {
-    let password = document.getElementById("signupScreenPasswordField");
-    let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
+    let password = document.getElementById("recruitScreenPasswordField");
+    let passwordRepeat = document.getElementById("recruitScreenPasswordRepeatField");
     if (password.value !== passwordRepeat.value) {
         passwordRepeat.style.color = "#EF2E2E";
     } else {
@@ -80,10 +80,10 @@ function passwordMatch() {
 }
 
 function cantBeBlank() {
-    let username = document.getElementById("signupScreenUsernameField");
-    let password = document.getElementById("signupScreenPasswordField");
-    let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
-    let submitButton = document.getElementById("signupScreenSubmit");
+    let username = document.getElementById("recruitScreenUsernameField");
+    let password = document.getElementById("recruitScreenPasswordField");
+    let passwordRepeat = document.getElementById("recruitScreenPasswordRepeatField");
+    let submitButton = document.getElementById("recruitScreenSubmit");
     if (username.value === null || username.value === "",
         password.value === null || password.value === "",
         passwordRepeat.value === null || passwordRepeat.value === "") {
@@ -91,23 +91,23 @@ function cantBeBlank() {
     } else if (password.value.length < 6){
         // do nothing
     } else {
-        signupScreenEnter();
-        submitButton.onclick = function () {signupScreenSubmit()};
+        recruitScreenEnter();
+        submitButton.onclick = function () {recruitScreenSubmit()};
     }
 }
 
-function signupScreenEnter() {
+function recruitScreenEnter() {
     if (event.keyCode === 13) {
-        signupScreenSubmit();
+        recruitScreenSubmit();
     }
 }
 
-function signupScreenSubmit() {
-    let submitScreen = document.getElementById("signupScreenForm");
+function recruitScreenSubmit() {
+    let submitScreen = document.getElementById("recruitScreenForm");
     document.getElementById("login").style.visibility = "visible";
-    document.getElementById("signup").style.visibility = "visible";
+    document.getElementById("recruit").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
-    document.getElementById("signupScreen").style.visibility = "hidden";
+    document.getElementById("recruitScreen").style.visibility = "hidden";
     submitScreen.reset();
 }
 
