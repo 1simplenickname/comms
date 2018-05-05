@@ -141,7 +141,6 @@ img {
 }
 
 #signupScreen {
-    /*visibility: visible;*/
     visibility: hidden;
     height: 315px;
     bottom: 30px;
@@ -166,8 +165,8 @@ img {
 
 #signupScreenSubmit {
     margin-top: 15px;
-    width: 225px;
     margin-left: -97.5px;
+    width: 225px;
 }
 
 #mailingScreenCross {
@@ -274,6 +273,14 @@ img {
         width: 354px;
     }
 
+    #signupScreenSubmit {
+        margin-left: -107.5px;
+    }
+
+    .centered {
+        margin-left: -122.5px;
+    }
+
 }
 
 /*iPad portrait media query*/
@@ -347,6 +354,14 @@ img {
         bottom: 150px;
         font-size: 65px;
     }
+
+    #signupScreen {
+        margin-left: -127.5px;
+    }
+
+    #signupScreenSubmit {
+        margin-left: -112.5px;
+    }
 }
 
 /*iPhone 4" portrait media query*/
@@ -362,6 +377,7 @@ img {
         width: 260px;
         font-size: 65px;
     }
+
 }
 
 /*Fix for placeholder text on Apple devices*/
