@@ -19,17 +19,6 @@ function signup() {
     document.getElementById("signupScreen").style.visibility = "visible";
 }
 
-function signupScreenClose() {
-    document.getElementById("login").style.visibility = "visible";
-    document.getElementById("signup").style.visibility = "visible";
-    document.getElementById("question").style.visibility = "visible";
-    document.getElementById("signupScreen").style.visibility = "hidden";
-}
-
-function question() {
-    window.open("#","_self")
-}
-
 function passwordStrength() {
     let password = document.getElementById("signupScreenPasswordField");
     let strength = 0;
@@ -76,4 +65,15 @@ function passwordMatch() {
         passwordRepeat.style.color = "#24B936";
         submitButton.onclick = function () {signupScreenClose()}
     }
+}
+
+function signupScreenClose() {
+    document.getElementById("login").style.visibility = "visible";
+    document.getElementById("signup").style.visibility = "visible";
+    document.getElementById("question").style.visibility = "visible";
+    document.getElementById("signupScreen").style.visibility = "hidden";
+}
+
+function question() {
+    window.open("#","_self")
 }
