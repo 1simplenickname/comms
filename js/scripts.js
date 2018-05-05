@@ -39,7 +39,7 @@ function passwordStrength() {
     if  (password.value.match(/[0-9][0-9]+/)) {
         strength += 1
     }
-    if (password.value.match(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/)) {
+    if (password.value.match(/[!"#$%&'()*+,./:;<=>?@^_`|~]/)) {
         strength += 1
     }
     if (password.value.length > 5) {
