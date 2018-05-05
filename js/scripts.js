@@ -6,10 +6,10 @@ function login() {
 }
 
 function loginScreenSubmit() {
-    document.getElementById("loginScreen").style.visibility = "hidden";
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("signup").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
+    document.getElementById("loginScreen").style.visibility = "hidden";
 }
 
 function signup() {
@@ -20,10 +20,10 @@ function signup() {
 }
 
 function signupScreenClose() {
-    document.getElementById("signupScreen").style.visibility = "hidden";
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("signup").style.visibility = "visible";
     document.getElementById("question").style.visibility = "visible";
+    document.getElementById("signupScreen").style.visibility = "hidden";
 }
 
 function question() {
@@ -68,8 +68,10 @@ function passwordStrength() {
 function passwordMatch() {
     let password = document.getElementById("signupScreenPasswordField");
     let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
+    let sumbitButton = document.getElementById("signupScreenSubmit");
     if (password.value !== passwordRepeat.value) {
         passwordRepeat.style.color = "#EF2E2E";
+        submitButton.classList.remove("")
     } else {
         passwordRepeat.style.color = "#24B936";
     }
