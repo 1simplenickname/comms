@@ -68,10 +68,12 @@ function passwordStrength() {
 function passwordMatch() {
     let password = document.getElementById("signupScreenPasswordField");
     let passwordRepeat = document.getElementById("signupScreenPasswordRepeatField");
-    // let sumbitButton = document.getElementById("signupScreenSubmit");
+    let submitButton = document.getElementById("signupScreenSubmit");
     if (password.value !== passwordRepeat.value) {
         passwordRepeat.style.color = "#EF2E2E";
+        submitButton.onclick = "";
     } else {
         passwordRepeat.style.color = "#24B936";
+        submitButton.onclick = function () {signupScreenClose()}
     }
 }
