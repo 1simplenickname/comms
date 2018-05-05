@@ -96,3 +96,7 @@ function signupScreenSubmit() {
 function question() {
     window.open("#","_self")
 }
+
+function signupScreen() {
+    let username = document.getElementById("signupScreenUsername");
+}
