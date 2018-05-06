@@ -281,10 +281,6 @@ body {
     background-image: url("../img/keyInverted.png");
 }
 
-#mailingScreenCross:hover {
-    background-image: url("../img/crossInverted.png");
-}
-
 #question:hover {
     background-image: url("../img/questionMarkInverted.png");
 }
