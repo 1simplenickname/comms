@@ -52,7 +52,7 @@ function recruit() {
 function passwordStrength() {
     let password = document.getElementById("recruitScreenPasswordField");
     let shape = document.getElementById("strengthMeterShapes");
-    let classification = document.getElementById("strengthMeterContent");
+    let content = document.getElementById("strengthMeterContent");
     let strength = 0;
     // checks if the password contains any letters
     if  (password.value.match(/[a-z][a-z]+/)) {
@@ -82,37 +82,37 @@ function passwordStrength() {
         // very weak password
         case 0:
             password.style.color = "#EF2E2E";
-            shape.className = "triangle";
-            classification.style.lineHeight = "30px";
-            classification.innerHTML = "VERY \ WEAK";
+            shape.className = "veryWeak";
+            content.style.lineHeight = "30px";
+            content.innerHTML = "VERY \ WEAK";
             break;
         // weak password
         case 2:
             password.style.color = "#EF7E2E";
-            shape.className = "square";
-            classification.style.lineHeight = "60px";
-            classification.innerHTML = "WEAK";
+            shape.className = "weak";
+            content.style.lineHeight = "60px";
+            content.innerHTML = "WEAK";
             break;
         // strong password
         case 4:
             password.style.color = "#EED82E";
-            shape.className = "hexagon";
-            classification.style.lineHeight = "60px";
-            classification.innerHTML = "STRONG";
+            shape.className = "strong";
+            content.style.lineHeight = "60px";
+            content.innerHTML = "STRONG";
             break;
         // very strong password
         case 6:
             password.style.color = "#24B936";
-            shape.className = "circle";
-            classification.style.lineHeight = "30px";
-            classification.innerHTML = "VERY \ STRONG";
+            shape.className = "veryStrong";
+            content.style.lineHeight = "30px";
+            content.innerHTML = "VERY \ STRONG";
             break;
     }
 }
 
 function strengthMeterShow() {
     let shape = document.getElementById("strengthMeterShapes");
-    shape.className = "triangle";
+    shape.className = "veryWeak";
     document.getElementById("strengthMeter").style.visibility = "visible";
 }
 
