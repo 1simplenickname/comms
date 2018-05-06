@@ -18,8 +18,7 @@ What things you need to get started with **Comms**
 
 ```
 1. open browser
-2. go to ``` [https://1simplenickname.github.io/comms/](https://1simplenickname.github.io/comms/)
-```
+2. go to https://1simplenickname.github.io/comms/
 3. ???
 4. profit
 ```
