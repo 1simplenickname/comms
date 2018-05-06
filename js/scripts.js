@@ -6,8 +6,10 @@
 // recruitScreen scripts //
         // recruit() //
     // passwordStrength() //
-    // passwordMatch() //
-    // cantBeBlank() //
+    // strengthMeterShow() //
+     // strengthMeterHide //
+        // passwordMatch() //
+        // cantBeBlank() //
     // recruitScreenEnter() //
     // recruitScreenSubmit() //
 // questionScreen scripts //
@@ -110,12 +112,14 @@ function passwordStrength() {
     }
 }
 
+// opens strengthMeter
 function strengthMeterShow() {
     let shape = document.getElementById("strengthMeterShapes");
     shape.className = "veryWeak";
     document.getElementById("strengthMeter").style.visibility = "visible";
 }
 
+// closes strengthMeter
 function strengthMeterHide() {
     let shape = document.getElementById("strengthMeterShapes");
     shape.className = "none";
