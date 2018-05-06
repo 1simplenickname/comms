@@ -1,21 +1,21 @@
         // NAVIGATION //
 // optimization and redundancy scripts //
-        // toggleVisibility() //
+    // toggleVisibility() //
     // loginScreen scripts //
-            // login() //
-        // loginScreenEnter() //
-        // loginScreenSubmit() //
+        // login() //
+    // loginScreenEnter() //
+    // loginScreenSubmit() //
     // recruitScreen scripts //
-            // recruit() //
+        // recruit() //
         // passwordStrength() //
         // strengthMeterShow() //
          // strengthMeterHide //
-            // passwordMatch() //
-            // cantBeBlank() //
+        // passwordMatch() //
+        // cantBeBlank() //
         // recruitScreenEnter() //
         // recruitScreenSubmit() //
     // questionScreen scripts //
-            // question() //
+        // question() //
 
 // optimization scripts
 // toggles the visibility of an element
@@ -147,6 +147,7 @@ function passwordMatch() {
 }
 
 // checks if any of the fields in recruitScreen are blank
+// and if the password is at least 6 characters long
 function cantBeBlank() {
     let username = document.getElementById("recruitScreenUsernameField");
     let password = document.getElementById("recruitScreenPasswordField");
@@ -160,7 +161,9 @@ function cantBeBlank() {
         // do nothing
     } else {
         recruitScreenEnter();
-        submitButton.onclick = function () {recruitScreenSubmit()};
+        submitButton.onclick = function () {
+            recruitScreenSubmit()
+        };
     }
 }
 
