@@ -1,27 +1,35 @@
-    // NAVIGATION //
-// loginScreen scripts //
-        // login() //
-    // loginScreenEnter() //
-    // loginScreenSubmit() //
-// recruitScreen scripts //
-        // recruit() //
-    // passwordStrength() //
-    // strengthMeterShow() //
-     // strengthMeterHide //
-        // passwordMatch() //
-        // cantBeBlank() //
-    // recruitScreenEnter() //
-    // recruitScreenSubmit() //
-// questionScreen scripts //
-        // question() //
+        // NAVIGATION //
+// optimization and redundancy scripts //
+        // toggleVisibility() //
+    // loginScreen scripts //
+            // login() //
+        // loginScreenEnter() //
+        // loginScreenSubmit() //
+    // recruitScreen scripts //
+            // recruit() //
+        // passwordStrength() //
+        // strengthMeterShow() //
+         // strengthMeterHide //
+            // passwordMatch() //
+            // cantBeBlank() //
+        // recruitScreenEnter() //
+        // recruitScreenSubmit() //
+    // questionScreen scripts //
+            // question() //
+
+// optimization scripts
+// toggles the visibility of an element
+function toggleVisibility(target, state) {
+   document.getElementById(target).style.visibility = state;
+}
 
 // loginScreen scripts
 // opens loginScreen
 function login() {
-    document.getElementById("login").style.visibility = "hidden";
-    document.getElementById("recruit").style.visibility = "hidden";
-    document.getElementById("question").style.visibility = "hidden";
-    document.getElementById("loginScreen").style.visibility = "visible";
+    toggleVisibility("login", "hidden");
+    toggleVisibility("recruit", "hidden");
+    toggleVisibility("question", "hidden");
+    toggleVisibility("loginScreen", "visible");
 }
 
 // closes loginScreen using the keyboard
@@ -34,20 +42,20 @@ function loginScreenEnter() {
 // closes loginScreen
 function loginScreenSubmit() {
     let loginScreen = document.getElementById("loginScreenForm");
-    document.getElementById("login").style.visibility = "visible";
-    document.getElementById("recruit").style.visibility = "visible";
-    document.getElementById("question").style.visibility = "visible";
-    document.getElementById("loginScreen").style.visibility = "hidden";
+    toggleVisibility("login", "visible");
+    toggleVisibility("recruit", "visible");
+    toggleVisibility("question", "visible");
+    toggleVisibility("loginScreen", "hidden");
     loginScreen.reset();
 }
 
 // recruitScreen scripts
 // opens recruitScreen
 function recruit() {
-    document.getElementById("login").style.visibility = "hidden";
-    document.getElementById("recruit").style.visibility = "hidden";
-    document.getElementById("question").style.visibility = "hidden";
-    document.getElementById("recruitScreen").style.visibility = "visible";
+    toggleVisibility("login", "hidden");
+    toggleVisibility("recruit", "hidden");
+    toggleVisibility("question", "hidden");
+    toggleVisibility("recruitScreen", "visible");
 }
 
 // checks if the password in recruitScreen is secure
@@ -116,14 +124,14 @@ function passwordStrength() {
 function strengthMeterShow() {
     let shape = document.getElementById("strengthMeterShapes");
     shape.className = "veryWeak";
-    document.getElementById("strengthMeter").style.visibility = "visible";
+    toggleVisibility("strengthMeter", "visible");
 }
 
 // closes strengthMeter
 function strengthMeterHide() {
     let shape = document.getElementById("strengthMeterShapes");
     shape.className = "none";
-    document.getElementById("strengthMeter").style.visibility = "hidden";
+    toggleVisibility("strengthMeter", "hidden");
 }
 
 // checks if the passwords in recruitScreen match
@@ -166,10 +174,10 @@ function recruitScreenEnter() {
 // closes recruitScreen
 function recruitScreenSubmit() {
     let submitScreen = document.getElementById("recruitScreenForm");
-    document.getElementById("login").style.visibility = "visible";
-    document.getElementById("recruit").style.visibility = "visible";
-    document.getElementById("question").style.visibility = "visible";
-    document.getElementById("recruitScreen").style.visibility = "hidden";
+    toggleVisibility("login", "visible");
+    toggleVisibility("recruit", "visible");
+    toggleVisibility("question", "visible");
+    toggleVisibility("recruitScreen", "hidden");
     submitScreen.reset();
 }
 
