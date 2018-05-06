@@ -1,24 +1,15 @@
-
 body {
     background-color: #246d98;
     overflow: hidden;
-}
-
-img {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    text-align: center;
 }
 
 .orange {
     color: #EF982E;
 }
 
-#logo, #quote {
-    text-align: center;
+.blue {
+    color: #246d98;
 }
 
 #logo {
@@ -27,18 +18,12 @@ img {
     font-size: 750px;
 }
 
-.logo {
-    margin: 0;
-}
-
 .button {
     position: fixed;
     background-color: #EF982E;
     font-size: 55px;
-    text-align: center;
     vertical-align: middle;
     line-height: 58px;
-    color: #246d98;
     transition: box-shadow 600ms ease-out,
                 background-color 600ms ease-out;
 }
@@ -55,7 +40,6 @@ img {
 
 .inverted {
     background-color: #246d98;
-    color: #EF982E;
     transition: box-shadow 600ms ease-out,
                 background-color 600ms ease-out;
 }
@@ -78,8 +62,6 @@ img {
     z-index: 5;
     position: fixed;
     background-color: #EF982E;
-    color: #246d98;
-    text-align: center;
 }
 
 .popupSmall {
@@ -99,12 +81,9 @@ img {
 
 .field {
     background-color: #246d98;
-    color: #EF982E;
-    width: 225px;
-    height: 60px;
     margin-top: 15px;
     border: 0;
-    font-size: 60px;
+    font-size: 55px;
     text-align: center;
     /*Fix for iOS' Safari input field styling:*/
     -webkit-appearance: none;
@@ -143,7 +122,6 @@ img {
 }
 
 #recruit {
-    width: 225px;
     bottom: 30px;
 }
 
@@ -168,7 +146,6 @@ img {
     background-color: #EF982E;
     margin-top: -60px;
     margin-left: -112.5px;
-    box-shadow: none;
 }
 
 #strengthMeterShapes {
@@ -223,19 +200,12 @@ img {
 #strengthMeterClassification {
     float: left;
     width: 165px;
-    height: 60px;
-    text-align: center;
     vertical-align: middle;
 }
 
 #strengthMeterContent {
-    width: 165px;
-    height: 60px;
     font-size: 35px;
-    text-align: center;
-    vertical-align: middle;
     line-height: 30px;
-    color: #246d98;
 }
 
 #recruitScreenPasswordRepeat {
@@ -245,15 +215,6 @@ img {
 #recruitScreenSubmit {
     margin-top: 15px;
     margin-left: -97.5px;
-    width: 225px;
-}
-
-#mailingScreenCross {
-    right: 45px;
-    top: 45px;
-    background-image: url("../img/cross.png");
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #question {
@@ -318,7 +279,6 @@ img {
 
 .inverted:hover {
     box-shadow: inset 0 0 0 5px #246d98;
-    background-color: transparent;
     color: #246d98;
 }
 
@@ -335,7 +295,7 @@ img {
 }
 
 ::selection{
-    background: #EF982E;
+    background-color: #EF982E;
     color: #246d98;
 }
 
@@ -459,7 +419,7 @@ img {
 }
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
-    background: #EF982E;
+    background-color: #EF982E;
     position: fixed;
 }
 
