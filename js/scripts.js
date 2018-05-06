@@ -17,7 +17,7 @@
     // questionScreen scripts //
         // question() //
 
-// optimization scripts
+// optimization and redundancy scripts
 // toggles the visibility of an element
 function toggleVisibility(target, state) {
    document.getElementById(target).style.visibility = state;
