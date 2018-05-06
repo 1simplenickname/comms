@@ -1,4 +1,4 @@
-# comms
+# COMMS
  the act of conveying intended meanings from one entity or group to another
 
 ## Getting Started
