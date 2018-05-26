@@ -25,7 +25,8 @@ body {
     vertical-align: middle;
     line-height: 58px;
     transition: box-shadow 600ms ease-out,
-                background-color 600ms ease-out;
+                background-color 600ms ease-out,
+                color 600ms ease-out;
 }
 
 .square {
@@ -212,7 +213,7 @@ body {
     margin-left: -97.5px;
 }
 
-#question {
+#about {
     right: 30px;
     bottom: 30px;
     background-image: url("../img/questionMarkNormal.png");
@@ -281,13 +282,22 @@ body {
     background-image: url("../img/keyInverted.png");
 }
 
-#question:hover {
+#about:hover {
     background-image: url("../img/questionMarkInverted.png");
 }
 
 ::selection{
     background-color: #EF982E;
     color: #246d98;
+}
+
+::placeholder {
+    color: #EF982E;
+    opacity: 1;
+}
+
+:-ms-input-placeholder, ::-ms-input-placeholder {
+    color: #EF982E;
 }
 
 /*iPad landscape media query*/

@@ -29,95 +29,104 @@
 
             </div>
 
-                <div id="login" class="button blue square" onclick="login()"></div>
-                <div id="loginScreen" class="popup popupSmall blue">
+            <div id="login" class="button blue square" onclick="login()"></div>
+            <div id="loginScreen" class="popup popupSmall blue">
 
-                    <form id="loginScreenForm">
+                <form id="loginScreenForm">
 
-                        <div id="loginScreenUsername" class="notSelectable">
-                            <input id="loginScreenUsernameField"
-                                   class="field orange rectangle notSelectable evolveBold"
-                                   onfocus="this.placeholder =''"
-                                   onblur="this.placeholder = 'USER'"
-                                   type="text" placeholder="USER">
-                        </div>
-                        <div id="loginScreenPassword" class="notSelectable">
-                            <input id="loginScreenPasswordField"
-                                   class="field orange rectangle notSelectable evolveBold"
-                                   onfocus="this.placeholder =''"
-                                   onblur="this.placeholder = 'PASS'"
-                                   type="password" placeholder="PASS"
-                                   onkeydown="loginScreenEnter()">
-                        </div>
-                        <div id="loginScreenSubmit"
-                             class="button orange rectangle inverted notSelectable evolveBold"
-                             onclick="loginScreenSubmit()">
-                                LOGIN
-                        </div>
+                    <div id="loginScreenUsername" class="notSelectable">
+                        <input id="loginScreenUsernameField"
+                               class="field orange rectangle notSelectable evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'USER'"
+                               type="text" placeholder="USER">
+                    </div>
+                    <div id="loginScreenPassword" class="notSelectable">
+                        <input id="loginScreenPasswordField"
+                               class="field orange rectangle notSelectable evolveBold"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'PASS'"
+                               type="password" placeholder="PASS"
+                               onkeydown="loginScreenEnter()">
+                    </div>
+                    <div id="loginScreenSubmit"
+                         class="button orange rectangle inverted notSelectable evolveBold"
+                         onclick="loginScreenSubmit()">
+                            LOGIN
+                    </div>
 
-                    </form>
+                </form>
 
-                </div>
+            </div>
 
-                <div id="recruit" class="button blue rectangle centered" onclick="recruit()">
-                
-                    <span class="evolveBold notSelectable">
-                        SIGN UP
-                    </span>
+            <div id="recruit" class="button blue rectangle centered" onclick="recruit()">
 
-                </div>
+                <span class="evolveBold notSelectable">
+                    SIGN UP
+                </span>
 
-                <div id="recruitScreen" class="popup popupSmall blue centered">
+            </div>
 
-                    <form id="recruitScreenForm">
+            <div id="recruitScreen" class="popup popupSmall blue centered">
 
-                        <div id="recruitScreenUsername" class="notSelectable">
-                            <input id="recruitScreenUsernameField"
-                                   class="field orange rectangle notSelectable evolveBold"
-                                   type="text" placeholder="USER"
-                                   onfocus="this.placeholder =''"
-                                   onblur="this.placeholder = 'USER'" >
-                        </div>
-                        <div id="recruitScreenPassword" class="notSelectable">
-                            <input id="recruitScreenPasswordField"
-                                   class="field orange rectangle notSelectable evolveBold"
-                                   type="password" placeholder="PASS"
-                                   onfocus="strengthMeterShow();
-                                            this.placeholder =''"
-                                   onblur="strengthMeterHide();
-                                           this.placeholder = 'PASS'"
-                                   onkeyup="passwordStrength(); passwordMatch()">
-                        </div>
-                        <div id="recruitScreenPasswordRepeat" class="notSelectable">
-                            <input id="recruitScreenPasswordRepeatField"
-                                   class="field orange rectangle notSelectable evolveBold"
-                                   type="password" placeholder="AGAIN"
-                                   onfocus="this.placeholder=''"
-                                   onblur="this.placeholder='AGAIN'"
-                                   onkeyup="passwordMatch()">
-                        </div>
-                        <div id="strengthMeter"
-                             class="rectangle notSelectable centered">
-                            <div id="strengthMeterShapes"
-                                 class="square notSelectable veryWeak"></div>
-                            <div id="strengthMeterClassification"
-                                 class="notSelectable">
-                                <div id="strengthMeterContent" class="blue evolveBold">
-                                    VERY<br>WEAK
-                                </div>
+                <form id="recruitScreenForm">
+
+                    <div id="recruitScreenUsername" class="notSelectable">
+                        <input id="recruitScreenUsernameField"
+                               class="field orange rectangle notSelectable evolveBold"
+                               type="text" placeholder="USER"
+                               onfocus="this.placeholder =''"
+                               onblur="this.placeholder = 'USER'" >
+                    </div>
+                    <div id="recruitScreenPassword" class="notSelectable">
+                        <input id="recruitScreenPasswordField"
+                               class="field orange rectangle notSelectable evolveBold"
+                               type="password" placeholder="PASS"
+                               onfocus="strengthMeterShow();
+                                        this.placeholder =''"
+                               onblur="strengthMeterHide();
+                                       this.placeholder = 'PASS'"
+                               onkeyup="passwordStrength(); passwordMatch()">
+                    </div>
+                    <div id="recruitScreenPasswordRepeat" class="notSelectable">
+                        <input id="recruitScreenPasswordRepeatField"
+                               class="field orange rectangle notSelectable evolveBold"
+                               type="password" placeholder="AGAIN"
+                               onfocus="this.placeholder=''"
+                               onblur="this.placeholder='AGAIN'"
+                               onkeyup="passwordMatch()">
+                    </div>
+                    <div id="strengthMeter"
+                         class="rectangle notSelectable centered">
+                        <div id="strengthMeterShapes"
+                             class="square notSelectable veryWeak"></div>
+                        <div id="strengthMeterClassification"
+                             class="notSelectable">
+                            <div id="strengthMeterContent" class="blue evolveBold">
+                                VERY<br>WEAK
                             </div>
                         </div>
-                        <div id="recruitScreenSubmit"
-                             class="button orange rectangle inverted centered
-                                    notSelectable evolveBold">
-                            SIGN UP
-                        </div>
+                    </div>
+                    <div id="recruitScreenSubmit"
+                         class="button rectangle inverted centered
+                                notSelectable evolveBold">
+                        SIGN UP
+                    </div>
 
-                    </form>
+                </form>
 
-                </div>
+            </div>
 
-                <div id="question" class="button blue square" onclick="question()"></div>
+            <div id="about" class="button blue square" onclick="about()"></div>
+
+            <script>
+                if('serviceWorker' in navigator) {
+                    navigator.serviceWorker.register('/sw.js')
+                        .then(function() {
+                            console.log('Service Worker Registered');
+                        });
+                }
+            </script>
 
         </div>
 

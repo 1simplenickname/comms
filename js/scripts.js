@@ -14,8 +14,8 @@
         // cantBeBlank() //
         // recruitScreenEnter() //
         // recruitScreenSubmit() //
-    // questionScreen scripts //
-        // question() //
+    // aboutScreen scripts //
+        // about() //
 
 // optimization and redundancy scripts
 // toggles the visibility of an element
@@ -28,7 +28,7 @@ function toggleVisibility(target, state) {
 function login() {
     toggleVisibility("login", "hidden");
     toggleVisibility("recruit", "hidden");
-    toggleVisibility("question", "hidden");
+    toggleVisibility("about", "hidden");
     toggleVisibility("loginScreen", "visible");
 }
 
@@ -44,7 +44,7 @@ function loginScreenSubmit() {
     let loginScreen = document.getElementById("loginScreenForm");
     toggleVisibility("login", "visible");
     toggleVisibility("recruit", "visible");
-    toggleVisibility("question", "visible");
+    toggleVisibility("about", "visible");
     toggleVisibility("loginScreen", "hidden");
     loginScreen.reset();
 }
@@ -52,9 +52,11 @@ function loginScreenSubmit() {
 // recruitScreen scripts
 // opens recruitScreen
 function recruit() {
+    let submitButton = document.getElementById("recruitScreenSubmit");
+    submitButton.style.color = "#7f7f7f";
     toggleVisibility("login", "hidden");
     toggleVisibility("recruit", "hidden");
-    toggleVisibility("question", "hidden");
+    toggleVisibility("about", "hidden");
     toggleVisibility("recruitScreen", "visible");
 }
 
@@ -156,10 +158,11 @@ function cantBeBlank() {
     if (username.value === null || username.value === "",
         password.value === null || password.value === "",
         passwordRepeat.value === null || passwordRepeat.value === "") {
-        // do nothing
+        submitButton.style.color = "#7f7f7f";
     } else if (password.value.length < 6){
-        // do nothing
+        submitButton.style.color = "#7f7f7f";
     } else {
+        submitButton.style.color = "#EF982E";
         recruitScreenEnter();
         submitButton.onclick = function () {
             recruitScreenSubmit()
@@ -176,16 +179,16 @@ function recruitScreenEnter() {
 
 // closes recruitScreen
 function recruitScreenSubmit() {
-    let submitScreen = document.getElementById("recruitScreenForm");
+    let recruitScreen = document.getElementById("recruitScreenForm");
     toggleVisibility("login", "visible");
     toggleVisibility("recruit", "visible");
-    toggleVisibility("question", "visible");
+    toggleVisibility("about", "visible");
     toggleVisibility("recruitScreen", "hidden");
-    submitScreen.reset();
+    recruitScreen.reset();
 }
 
-// questionScreen scripts
-// opens questionScreen
-function question() {
+// aboutScreen scripts
+// opens aboutScreen
+function about() {
     window.open("#","_self")
 }
