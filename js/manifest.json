@@ -1,21 +1,12 @@
 {
-  "name": "Comms",
   "short_name": "Comms",
+  "name": "Comms",
   "start_url": "../index.html",
   "gcm_sender_id": "103953800507",
   "display": "fullscreen",
   "background_color": "#246d98",
   "theme_color": "#246d98",
   "icons": [{
-          "src": "../img/icons/pwa/128x128.png",
-          "sizes": "128x128"
-      }, {
-          "src": "../img/icons/pwa/144x144.png",
-          "sizes": "144x144"
-      }, {
-          "src": "../img/icons/pwa/152x152.png",
-          "sizes": "152x152"
-      }, {
           "src": "../img/icons/pwa/192x192.png",
           "sizes": "192x192"
       }, {
