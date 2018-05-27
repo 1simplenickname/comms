@@ -4,10 +4,14 @@
     <head>
 
         <title>Comms</title>
+        <meta name="description"
+              content="the act of conveying intended meanings from
+              one entity or group to another">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="manifest" href="js/manifest.json">
         <script src="js/scripts.js"></script>
 
     </head>
@@ -121,7 +125,7 @@
 
             <script>
                 if('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('sw.js')
+                    navigator.serviceWorker.register('js/sw.js')
                         .then(function() {
                             console.log('Service Worker Registered');
                         });
