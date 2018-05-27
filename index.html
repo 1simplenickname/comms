@@ -13,8 +13,6 @@
         <!--Styling-->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!--Scripts-->
-        <script src="js/scripts.js"></script>
         <!--Progressive Web App-->
         <link rel="manifest" href="js/manifest.json">
         <meta name="theme-color" content="#EF982E">
@@ -128,16 +126,36 @@
 
             <div id="about" class="button blue square" onclick="about()"></div>
 
-            <script>
-                if('serviceWorker' in navigator) {
-                    navigator.serviceWorker.register('js/sw.js')
-                        .then(function() {
-                            console.log('Service Worker Registered');
-                        });
-                }
-            </script>
-
         </div>
+
+        <!--Scripts-->
+
+        <!--Firebase-->
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyD9HfAVFQbLutWuepdg8Au2XtrStdxm7sk",
+                authDomain: "comms-75744.firebaseapp.com",
+                databaseURL: "https://comms-75744.firebaseio.com",
+                projectId: "comms-75744",
+                storageBucket: "",
+                messagingSenderId: "1042362361442"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <!--Website behavior-->
+        <script src="js/scripts.js"></script>
+
+        <!--Service worker-->
+        <script>
+            if('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('js/sw.js')
+                    .then(function() {
+                        console.log('Service Worker Registered');
+                    });
+            }
+        </script>
 
     </body>
 
