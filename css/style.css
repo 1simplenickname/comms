@@ -90,7 +90,7 @@ body {
 #login {
     left: 30px;
     bottom: 30px;
-    background-image: url("../img/keyNormal.png");
+    background-image: url("../img/loginScreen/buttons/keyNormal.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -216,7 +216,7 @@ body {
 #about {
     right: 30px;
     bottom: 30px;
-    background-image: url("../img/questionMarkNormal.png");
+    background-image: url("../img/aboutScreen/buttons/questionMarkNormal.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -279,11 +279,11 @@ body {
 }
 
 #login:hover {
-    background-image: url("../img/keyInverted.png");
+    background-image: url("../img/loginScreen/buttons/keyInverted.png");
 }
 
 #about:hover {
-    background-image: url("../img/questionMarkInverted.png");
+    background-image: url("../img/aboutScreen/buttons/questionMarkInverted.png");
 }
 
 ::selection{
