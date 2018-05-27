@@ -17,16 +17,6 @@
         <link rel="manifest" href="js/manifest.json">
         <meta name="theme-color" content="#EF982E">
 
-        <!--Service worker-->
-        <script>
-            if('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('https://1simplenickname.github.io/comms/js/sw.js')
-                    .then(function() {
-                        console.log('Service Worker Registered');
-                    });
-            }
-        </script>
-
     </head>
 
     <body>
@@ -156,6 +146,20 @@
 
         <!--Website behavior-->
         <script src="js/scripts.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('https://1simplenickname.github.io/comms/js/sw.js').then(function(registration) {
+                    // Registration was successful
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                    // registration failed :(
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
+        }
+    </script>
 
     </body>
 
