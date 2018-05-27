@@ -3,17 +3,28 @@
 
     <head>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--SEO compatibility-->
         <title>Comms</title>
         <meta name="description"
               content="the act of conveying intended meanings from
               one entity or group to another">
-        <!--Styling-->
+        <!--Favicons-->
+        <link rel="shortcut icon" href="img/icons/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+        <link rel="manifest" href="img/icons/site.webmanifest">
+        <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#246d98">
+        <meta name="msapplication-config" content="img/icons/browserconfig.xml">
+        <meta name="theme-color" content="#246d98">
+        <!--UTF-8 character support-->
+        <meta charset="UTF-8">
+        <!--Display scaling support-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Styling and animations-->
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!--Progressive Web App-->
+        <!--Progressive Web App stuffs-->
         <link rel="manifest" href="js/manifest.json">
         <meta name="theme-color" content="#EF982E">
 
@@ -21,13 +32,16 @@
 
     <body>
 
+        <!--Site frame-->
         <div class="leftBorder"></div>
         <div class="rightBorder"></div>
         <div class="topBorder"></div>
         <div class="bottomBorder"></div>
 
+        <!--Landing page-->
         <div id="landing">
 
+            <!--Logo-->
             <div id="logo" class="orange">
 
                 <h1 class="comms notSelectable">
@@ -36,19 +50,24 @@
 
             </div>
 
+            <!--Login-->
             <div id="login" class="button blue square" onclick="login()"></div>
+            <!--Login screen-->
             <div id="loginScreen" class="popup popupSmall blue">
 
                 <form id="loginScreenForm">
-
+                    <!--Username-->
                     <div id="loginScreenUsername" class="notSelectable">
+                        <!--Username field-->
                         <input id="loginScreenUsernameField"
                                class="field orange rectangle notSelectable evolveBold"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'USER'"
                                type="text" placeholder="USER">
                     </div>
+                    <!--Password-->
                     <div id="loginScreenPassword" class="notSelectable">
+                        <!--Password field-->
                         <input id="loginScreenPasswordField"
                                class="field orange rectangle notSelectable evolveBold"
                                onfocus="this.placeholder =''"
@@ -56,6 +75,7 @@
                                type="password" placeholder="PASS"
                                onkeydown="loginScreenEnter()">
                     </div>
+                    <!--Submit button-->
                     <div id="loginScreenSubmit"
                          class="button orange rectangle inverted notSelectable evolveBold"
                          onclick="loginScreenSubmit()">
@@ -66,6 +86,7 @@
 
             </div>
 
+            <!--Sign up-->
             <div id="recruit" class="button blue rectangle centered" onclick="recruit()">
 
                 <span class="evolveBold notSelectable">
@@ -73,19 +94,23 @@
                 </span>
 
             </div>
-
+            <!--Recruit screen-->
             <div id="recruitScreen" class="popup popupSmall blue centered">
 
                 <form id="recruitScreenForm">
 
+                    <!--Username-->
                     <div id="recruitScreenUsername" class="notSelectable">
+                        <!--Username input field-->
                         <input id="recruitScreenUsernameField"
                                class="field orange rectangle notSelectable evolveBold"
                                type="text" placeholder="USER"
                                onfocus="this.placeholder =''"
                                onblur="this.placeholder = 'USER'" >
                     </div>
+                    <!--Password-->
                     <div id="recruitScreenPassword" class="notSelectable">
+                        <!--Password input field-->
                         <input id="recruitScreenPasswordField"
                                class="field orange rectangle notSelectable evolveBold"
                                type="password" placeholder="PASS"
@@ -95,7 +120,9 @@
                                        this.placeholder = 'PASS'"
                                onkeyup="passwordStrength(); passwordMatch()">
                     </div>
+                    <!--Repeat input password-->
                     <div id="recruitScreenPasswordRepeat" class="notSelectable">
+                        <!--Repeat password field-->
                         <input id="recruitScreenPasswordRepeatField"
                                class="field orange rectangle notSelectable evolveBold"
                                type="password" placeholder="AGAIN"
@@ -103,20 +130,21 @@
                                onblur="this.placeholder='AGAIN'"
                                onkeyup="passwordMatch()">
                     </div>
-                    <div id="strengthMeter"
-                         class="rectangle notSelectable centered">
+                    <!--Password strength indicator-->
+                    <div id="strengthMeter" class="rectangle notSelectable centered">
                         <div id="strengthMeterShapes"
-                             class="square notSelectable veryWeak"></div>
-                        <div id="strengthMeterClassification"
-                             class="notSelectable">
+                             class="square notSelectable veryWeak">
+                        </div>
+                        <div id="strengthMeterClassification" class="notSelectable">
                             <div id="strengthMeterContent" class="blue evolveBold">
                                 VERY<br>WEAK
                             </div>
                         </div>
                     </div>
+                    <!--Submit button-->
                     <div id="recruitScreenSubmit"
-                         class="button rectangle inverted centered
-                                notSelectable evolveBold">
+                         class="button rectangle inverted
+                                centered notSelectable evolveBold">
                         SIGN UP
                     </div>
 
@@ -124,37 +152,22 @@
 
             </div>
 
+            <!--About-->
             <div id="about" class="button blue square" onclick="about()"></div>
 
         </div>
 
-        <!--Scripts-->
+    <!--Scripts-->
+    <!--Website behavior-->
+    <script src="js/scripts.js"></script>
 
-        <!--Firebase-->
-        <!--<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>-->
-        <!--<script>-->
-            <!--var config = {-->
-                <!--apiKey: "AIzaSyD9HfAVFQbLutWuepdg8Au2XtrStdxm7sk",-->
-                <!--authDomain: "comms-75744.firebaseapp.com",-->
-                <!--databaseURL: "https://comms-75744.firebaseio.com",-->
-                <!--projectId: "comms-75744",-->
-                <!--storageBucket: "",-->
-                <!--messagingSenderId: "1042362361442"-->
-            <!--};-->
-            <!--firebase.initializeApp(config);-->
-        <!--</script>-->
-
-        <!--Website behavior-->
-        <script src="js/scripts.js"></script>
-
+    <!--Service worker (necessary for PWA)-->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('js/sw.js').then(function(registration) {
-                    // Registration was successful
                     console.log('ServiceWorker registration successful with scope: ', registration.scope);
                 }, function(err) {
-                    // registration failed :(
                     console.log('ServiceWorker registration failed: ', err);
                 });
             });

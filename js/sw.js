@@ -1,9 +1,9 @@
 var cacheName = 'comms-cache';
 var filesToCache = [
     '/',
-    'index.html',
-    'css/style.css',
-    'js/scripts.js'
+    '../index.html',
+    '../css/style.css',
+    'scripts.js'
 ];
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
