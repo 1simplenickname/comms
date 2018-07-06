@@ -1,182 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+	<head>
 
-        <title>Comms</title>
-        <meta name="description"
-              content="the act of conveying intended meanings from
-              one entity or group to another">
-        <!--Favicons-->
-        <link rel="shortcut icon" href="img/icons/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-        <link rel="manifest" href="img/icons/site.webmanifest">
-        <link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#246d98">
-        <meta name="msapplication-config" content="img/icons/browserconfig.xml">
-        <meta name="theme-color" content="#246d98">
-        <!--UTF-8 character support-->
-        <meta charset="UTF-8">
-        <!--Display scaling support-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--Styling and animations-->
-        <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <!--Progressive Web App stuffs-->
-        <link rel="manifest" href="js/manifest.json">
-        <meta name="theme-color" content="#EF982E">
-        <meta name="msapplication-navbutton-color" content="#EF982E">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<!--Performance benchmark start-->
+		<script type="text/javascript">
+			let timer = Date.now();
+		</script>
 
-    </head>
 
-    <body>
+		<title>Comms</title>
+		<meta name="description"
+			  content="the act of conveying intended meanings from
+			  one entity or group to another">
+		<!--Favicons-->
+		<link rel="shortcut icon" href="img/icons/favicon.ico">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+		<link rel="manifest" href="img/icons/site.webmanifest">
+		<link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#246d98">
+		<meta name="msapplication-config" content="img/icons/browserconfig.xml">
+		<meta name="theme-color" content="#246d98">
+		<!--UTF-8 character support-->
+		<meta charset="UTF-8">
+		<!--Display scaling support-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--Styling and animations-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!--Progressive Web App stuffs-->
+		<link rel="manifest" href="js/manifest.json">
+		<meta name="theme-color" content="#EF982E">
+		<meta name="msapplication-navbutton-color" content="#EF982E">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <!--Site frame-->
-        <div class="leftBorder"></div>
-        <div class="rightBorder"></div>
-        <div class="topBorder"></div>
-        <div class="bottomBorder"></div>
+	</head>
 
-        <!--Landing page-->
-        <div id="landing">
+	<body>
 
-            <!--Logo-->
-            <div id="logo" class="orange">
+		<!--Site frame-->
+		<div class="leftBorder"></div>
+		<div class="rightBorder"></div>
+		<div class="topBorder"></div>
+		<div class="bottomBorder"></div>
 
-                <h1 class="comms notSelectable">
-                    Comms
-                </h1>
+		<!--Landing page-->
+		<div id="landing">
 
-            </div>
+			<!--Logo-->
+			<div id="logo" class="orange"
+				 onclick="hideEverything()">
 
-            <!--Login-->
-            <div id="login" class="button blue square" onclick="login()"></div>
-            <!--Login screen-->
-            <div id="loginScreen" class="popup popupSmall blue">
+				<h1 class="comms notSelectable">
+					Comms
+				</h1>
 
-                <form id="loginScreenForm">
-                    <!--Username-->
-                    <div id="loginScreenUsername" class="notSelectable">
-                        <!--Username field-->
-                        <input id="loginScreenUsernameField"
-                               class="field orange rectangle notSelectable evolveBold"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'USER'"
-                               type="text" placeholder="USER">
-                    </div>
-                    <!--Password-->
-                    <div id="loginScreenPassword" class="notSelectable">
-                        <!--Password field-->
-                        <input id="loginScreenPasswordField"
-                               class="field orange rectangle notSelectable evolveBold"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'PASS'"
-                               type="password" placeholder="PASS"
-                               onkeydown="loginScreenEnter()">
-                    </div>
-                    <!--Submit button-->
-                    <div id="loginScreenSubmit"
-                         class="button orange rectangle inverted notSelectable evolveBold"
-                         onclick="loginScreenSubmit()">
-                            LOGIN
-                    </div>
+			</div>
 
-                </form>
+			<!--Login button-->
+			<div id="login" class="button blue square" onclick="login()"></div>
+			<!--Login screen-->
+			<div id="loginScreen" class="popup popupSmall blue">
 
-            </div>
+				<form id="loginScreenForm">
+					<!--Username-->
+					<div id="loginScreenUsername" class="notSelectable">
+						<!--Username field-->
+						<input id="loginScreenUsernameField"
+							   class="field orange rectangle notSelectable evolveBold"
+							   onfocus="this.placeholder =''"
+							   onblur="this.placeholder = 'USER'"
+							   type="text" placeholder="USER">
+					</div>
+					<!--Password-->
+					<div id="loginScreenPassword" class="notSelectable">
+						<!--Password field-->
+						<input id="loginScreenPasswordField"
+							   class="field orange rectangle notSelectable evolveBold"
+							   onfocus="this.placeholder =''"
+							   onblur="this.placeholder = 'PASS'"
+							   type="password" placeholder="PASS"
+							   onkeydown="loginScreenEnter()">
+					</div>
+					<!--Remember Me -->
+					<div id="rememberMe" class="notSelectable">
+						<!--Remember Me field-->
+						<div id="rememberMeField" class="rectangle notSelectable">
+							<!--Remember Me checkbox-->
+							<div id="rememberMeCheckbox" 
+								 class="square inverted notSelectable"></div>
+							<!--Remember Me content-->
+							<div id="rememberMeContent" class="blue square evolveBold notSelectable">
+								REMEMBER ME
+							</div>
+						</div>
+					</div>
+					<!--Submit button-->
+					<div id="loginScreenSubmit"
+						 class="button orange rectangle inverted notSelectable evolveBold"
+						 onclick="loginScreenSubmit()">
+							LOGIN
+					</div>
 
-            <!--Sign up-->
-            <div id="recruit" class="button blue rectangle centered" onclick="recruit()">
+				</form>
 
-                <span class="evolveBold notSelectable">
-                    SIGN UP
-                </span>
+			</div>
 
-            </div>
-            <!--Recruit screen-->
-            <div id="recruitScreen" class="popup popupSmall blue centered">
+			<!--Recruit button-->
+			<div id="recruit" class="button blue rectangle centered" onclick="recruit()">
 
-                <form id="recruitScreenForm">
+				<span class="evolveBold notSelectable">
+					SIGN UP
+				</span>
 
-                    <!--Username-->
-                    <div id="recruitScreenUsername" class="notSelectable">
-                        <!--Username input field-->
-                        <input id="recruitScreenUsernameField"
-                               class="field orange rectangle notSelectable evolveBold"
-                               type="text" placeholder="USER"
-                               onfocus="this.placeholder =''"
-                               onblur="this.placeholder = 'USER'" >
-                    </div>
-                    <!--Password-->
-                    <div id="recruitScreenPassword" class="notSelectable">
-                        <!--Password input field-->
-                        <input id="recruitScreenPasswordField"
-                               class="field orange rectangle notSelectable evolveBold"
-                               type="password" placeholder="PASS"
-                               onfocus="strengthMeterShow();
-                                        this.placeholder =''"
-                               onblur="strengthMeterHide();
-                                       this.placeholder = 'PASS'"
-                               onkeyup="passwordStrength(); passwordMatch()">
-                    </div>
-                    <!--Repeat input password-->
-                    <div id="recruitScreenPasswordRepeat" class="notSelectable">
-                        <!--Repeat password field-->
-                        <input id="recruitScreenPasswordRepeatField"
-                               class="field orange rectangle notSelectable evolveBold"
-                               type="password" placeholder="AGAIN"
-                               onfocus="this.placeholder=''"
-                               onblur="this.placeholder='AGAIN'"
-                               onkeyup="passwordMatch()">
-                    </div>
-                    <!--Password strength indicator-->
-                    <div id="strengthMeter" class="rectangle notSelectable centered">
-                        <div id="strengthMeterShapes"
-                             class="square notSelectable veryWeak">
-                        </div>
-                        <div id="strengthMeterClassification" class="notSelectable">
-                            <div id="strengthMeterContent" class="blue evolveBold">
-                                VERY<br>WEAK
-                            </div>
-                        </div>
-                    </div>
-                    <!--Submit button-->
-                    <div id="recruitScreenSubmit"
-                         class="button rectangle inverted
-                                centered notSelectable evolveBold">
-                        SIGN UP
-                    </div>
+			</div>
+			<!--Recruit screen-->
+			<div id="recruitScreen" class="popup popupSmall blue centered">
 
-                </form>
+				<form id="recruitScreenForm">
 
-            </div>
+					<!--Username-->
+					<div id="recruitScreenUsername" class="notSelectable">
+						<!--Username input field-->
+						<input id="recruitScreenUsernameField"
+							   class="field orange rectangle notSelectable evolveBold"
+							   type="text" placeholder="USER"
+							   onfocus="this.placeholder =''"
+							   onblur="this.placeholder = 'USER'" >
+					</div>
+					<!--Password-->
+					<div id="recruitScreenPassword" class="notSelectable">
+						<!--Password input field-->
+						<input id="recruitScreenPasswordField"
+							   class="field orange rectangle notSelectable evolveBold"
+							   type="password" placeholder="PASS"
+							   onfocus="strengthMeterShow();
+										this.placeholder =''"
+							   onblur="strengthMeterHide();
+									   this.placeholder = 'PASS'"
+							   onkeyup="passwordStrength(); passwordMatch()">
+					</div>
+					<!--Repeat password-->
+					<div id="recruitScreenPasswordRepeat" class="notSelectable">
+						<!--Repeat password input field-->
+						<input id="recruitScreenPasswordRepeatField"
+							   class="field orange rectangle notSelectable evolveBold"
+							   type="password" placeholder="AGAIN"
+							   onfocus="this.placeholder=''"
+							   onblur="this.placeholder='AGAIN'"
+							   onkeyup="passwordMatch()">
+					</div>
+					<!--Strength meter-->
+					<div id="strengthMeter" class="rectangle notSelectable centered">
+						<!--Strength meter indicator-->
+						<div id="strengthMeterShapes"
+							 class="square floated notSelectable veryWeak">
+						</div>
+						<!--Strength meter classification-->
+						<div id="strengthMeterClassification" 
+							 class="floated notSelectable">
+							<!--Strength meter classification content-->
+							<div id="strengthMeterContent" 
+								 class="blue floated evolveBold">
+								VERY<br>WEAK
+							</div>
+						</div>
+					</div>
+					<!--Submit button-->
+					<div id="recruitScreenSubmit"
+						 class="button rectangle inverted
+								centered notSelectable evolveBold">
+						SIGN UP
+					</div>
 
-            <!--About-->
-            <div id="about" class="button blue square" onclick="about()"></div>
+				</form>
 
-        </div>
+			</div>
 
-    <!--Scripts-->
-    <!--Website behavior-->
-    <script src="js/scripts.js"></script>
+			<!--About button-->
+			<div id="about" class="button blue square" onclick="about()"></div>
 
-    <!--Service worker (necessary for PWA)-->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
+		</div>
 
-    </body>
+	<!--Scripts-->
+	<!--Website behavior-->
+	<script src="js/scripts.js"></script>
+
+	<!--Service worker (necessary for PWA)-->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function() {
+				navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
+					console.log('ServiceWorker registration successful with scope: ', registration.scope);
+				}, function(err) {
+					console.log('ServiceWorker registration failed: ', err);
+				});
+			});
+		}
+	</script>
+
+	<!--Performance benchmark end-->
+	<script type="text/javascript">
+		window.onload = function() {
+			console.log("Time until everything loaded: ", (Date.now()-timer)/1000, " seconds");
+		}
+	</script>
+
+	</body>
 
 </html>

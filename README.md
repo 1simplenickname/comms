@@ -1,11 +1,6 @@
 # COMMS
  the act of conveying intended meanings from one entity or group to another
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine
-for development and testing purposes.
-
 ### Prerequisites
 
 What things you need to get started with **Comms**
@@ -28,7 +23,7 @@ What things you need to get started with **Comms**
 
 * Hypertext Markup Language 
 * Cascading Style Sheets
-* ECMAScript / JavaScript
+* JavaScript
 
 ## Authors
 

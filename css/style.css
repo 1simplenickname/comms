@@ -1,103 +1,118 @@
 body {
-    background-color: #246d98;
-    overflow: hidden;
-    text-align: center;
+	background-color: #246d98;
+	overflow: hidden;
+	text-align: center;
 }
 
 .orange {
-    color: #EF982E;
+	color: #EF982E;
 }
 
 .blue {
-    color: #246d98;
+	color: #246d98;
+}
+
+.gray {
+	color: #7f7f7f;
 }
 
 #logo {
-    visibility: visible;
-    margin-top: 50px;
-    font-size: 750px;
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+	margin-top: 50px;
+	font-size: 750px;
+	transition: filter 300ms ease-in-out;
+	z-index: 1;
 }
 
 .button {
-    position: fixed;
-    background-color: #EF982E;
-    font-size: 55px;
-    vertical-align: middle;
-    line-height: 58px;
-    transition: box-shadow 600ms ease-out,
-                background-color 600ms ease-out,
-                color 600ms ease-out;
+	position: fixed;
+	background-color: #EF982E;
+	font-size: 55px;
+	vertical-align: middle;
+	line-height: 58px;
+	transition: box-shadow 600ms ease-out,
+				background-color 600ms ease-out,
+				color 600ms ease-out;
+	z-index: 2;
 }
 
 .square {
-    width: 60px;
-    height: 60px;
+	width: 60px;
+	height: 60px;
 }
 
 .rectangle {
-    width: 225px;
-    height: 60px;
+	width: 225px;
+	height: 60px;
+}
+
+.blurred {
+	filter: blur(25px);
 }
 
 .inverted {
-    background-color: #246d98;
-    transition: box-shadow 600ms ease-out,
-                background-color 600ms ease-out;
+	background-color: #246d98;
+	transition: box-shadow 600ms ease-out,
+				background-color 600ms ease-out;
 }
 
 .centered {
-    left: 50%;
-    margin-left: -112.5px;
+	left: 50%;
+	margin-left: -112.5px;
 }
 
 .notSelectable {
-    user-select: none;
+	user-select: none;
 }
 
 .popup {
-    z-index: 5;
-    position: fixed;
-    background-color: #EF982E;
+	z-index: 2;
+	position: fixed;
+	background-color: #EF982E;
 }
 
 .popupSmall {
-    visibility: hidden;
-    width: 255px;
-    height: 240px;
-    animation: zeroToHero 3000ms;
+	visibility: hidden;
+	width: 255px;
+	height: 240px;
+	animation: zeroToHero 3000ms;
 }
 
 .popupLarge {
-    visibility: hidden;
-    left: 30px;
-    top: 30px;
-    width: 1860px;
-    height: 890px;
+	visibility: hidden;
+	left: 30px;
+	top: 30px;
+	width: 1860px;
+	height: 890px;
 }
 
 .field {
-    background-color: #246d98;
-    margin-top: 15px;
-    border: 0;
-    font-size: 55px;
-    text-align: center;
-    /*Fix for iOS' Safari input field styling:*/
-    -webkit-appearance: none;
-    border-radius: 0;
-    padding: 0;
+	background-color: #246d98;
+	margin-top: 15px;
+	border: 0;
+	font-size: 55px;
+	text-align: center;
+	/*Fix for iOS' Safari input field styling:*/
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 0;
 }
 
 #login {
-    left: 30px;
-    bottom: 30px;
-    background-image: url("../img/loginScreen/buttons/keyNormal.png");
-    background-position: center;
-    background-repeat: no-repeat;
+	left: 30px;
+	bottom: 30px;
+	background-image: url("../img/loginScreen/buttons/keyNormal.png");
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #loginScreen {
-    left: 30px;
-    bottom: 30px;
+	left: 30px;
+	bottom: 30px;
+	height: 315px;
+	visibility: hidden;
 }
 
 #loginScreenUsername {
@@ -108,23 +123,40 @@ body {
 
 }
 
-#loginScreenRemember {
+#remeberMe {
+	position: absolute;
+}
 
+#rememberMeField {
+	margin-top: 15px;
+	text-align: center;
+}
+
+#rememberMeCheckbox {
+	float: left;
+	margin-left: 15px
+}
+
+#rememberMeContent {
+	float: left;
+	vertical-align: middle;
+	width: 150px;
+	font-size: 25px;
 }
 
 #loginScreenSubmit {
-    left: 45px;
-    margin-top: 15px;
+	left: 45px;
+	margin-top: 15px;
 }
 
 #recruit {
-    bottom: 30px;
+	bottom: 30px;
 }
 
 #recruitScreen {
-    visibility: hidden;
-    height: 315px;
-    bottom: 30px;
+	visibility: hidden;
+	height: 315px;
+	bottom: 30px;
 }
 
 #recruitScreenUsername {
@@ -135,319 +167,302 @@ body {
 
 }
 
-#strengthMeter {
-    visibility: hidden;
-    z-index: 2;
-    position: absolute;
-    background-color: #EF982E;
-    margin-top: -60px;
-    margin-left: -112.5px;
-}
-
-#strengthMeterShapes {
-    float: left;
-    width: 60px;
-    height: 60px;
-}
-
-.none {
-    background-color: transparent;
-}
-
-.veryWeak {
-    background-color: #EF2E2E;
-    -webkit-clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
-    clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
-    transition: background-color 1000ms ease-in-out,
-                clip-path 1000ms ease-in-out,
-                -webkit-clip-path 1000ms ease-in-out,
-                border-radius 1000ms ease-in-out;
-}
-
-.weak {
-    background-color: #EF7E2E;
-    -webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
-    clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
-    transition: background-color 1000ms ease-in-out,
-                clip-path 1000ms ease-in-out,
-                -webkit-clip-path 1000ms ease-in-out,
-                border-radius 1000ms ease-in-out;
-}
-
-.strong {
-    background-color: #EED82E;
-    -webkit-clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
-    clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
-    transition: background-color 1000ms ease-in-out,
-                clip-path 1000ms ease-in-out,
-                -webkit-clip-path 1000ms ease-in-out,
-                border-radius 1000ms ease-in-out;
-}
-
-.veryStrong {
-    background-color: #24B936;
-    border-radius: 50%;
-    transition: background-color 1000ms ease-in-out,
-                clip-path 1000ms ease-in-out,
-                -webkit-clip-path 1000ms ease-in-out,
-                border-radius 1000ms ease-in-out;
-}
-
-#strengthMeterClassification {
-    float: left;
-    width: 165px;
-    vertical-align: middle;
-}
-
-#strengthMeterContent {
-    font-size: 35px;
-    line-height: 30px;
-}
-
 #recruitScreenPasswordRepeat {
 
 }
 
 #recruitScreenSubmit {
-    margin-top: 15px;
-    margin-left: -97.5px;
+	margin-top: 15px;
+	margin-left: -97.5px;
+}
+
+#strengthMeter {
+	visibility: hidden;
+	z-index: 3;
+	position: absolute;
+	background-color: #EF982E;
+	margin-top: -60px;
+}
+
+#strengthMeterShapes {
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+
+#strengthMeterClassification {
+	float: left;
+	width: 165px;
+	vertical-align: middle;
+}
+
+#strengthMeterContent {
+	font-size: 35px;
+	line-height: 30px;
+}
+
+.none {
+	background-color: transparent;
+}
+
+.veryWeak {
+	background-color: #EF2E2E;
+	-webkit-clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
+	clip-path: polygon(0 100%, 0 100%, 50% 0, 50% 0, 50% 0, 50% 0, 100% 100%, 100% 100%);
+	transition: background-color 1000ms ease-in-out,
+				clip-path 1000ms ease-in-out,
+				-webkit-clip-path 1000ms ease-in-out,
+				border-radius 1000ms ease-in-out;
+}
+
+.weak {
+	background-color: #EF7E2E;
+	-webkit-clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
+	clip-path: polygon(0 100%, 0 100%, 0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%);
+	transition: background-color 1000ms ease-in-out,
+				clip-path 1000ms ease-in-out,
+				-webkit-clip-path 1000ms ease-in-out,
+				border-radius 1000ms ease-in-out;
+}
+
+.strong {
+	background-color: #EED82E;
+	-webkit-clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
+	clip-path: polygon(25% 100%, 0 75%, 0 25%, 25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%);
+	transition: background-color 1000ms ease-in-out,
+				clip-path 1000ms ease-in-out,
+				-webkit-clip-path 1000ms ease-in-out,
+				border-radius 1000ms ease-in-out;
+}
+
+.veryStrong {
+	background-color: #24B936;
+	border-radius: 50%;
+	transition: background-color 1000ms ease-in-out,
+				clip-path 1000ms ease-in-out,
+				-webkit-clip-path 1000ms ease-in-out,
+				border-radius 1000ms ease-in-out;
 }
 
 #about {
-    right: 30px;
-    bottom: 30px;
-    background-image: url("../img/aboutScreen/buttons/questionMarkNormal.png");
-    background-position: center;
-    background-repeat: no-repeat;
+	right: 30px;
+	bottom: 30px;
+	background-image: url("../img/aboutScreen/buttons/questionMarkNormal.png");
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 @font-face {
-    /*Font provided by dafont.com*/
-    /*https://www.dafont.com/savour-pinacolada.font*/
-    font-family: Comms;
-    src: url('../fonts/comms/comms.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/comms/comms.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../fonts/comms/comms.woff') format('woff'), /* Modern Browsers */
-         url('../fonts/comms/comms.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('../fonts/comms/comms.svg#svgFontName') format('svg'); /* Legacy iOS */
+	/*Font provided by dafont.com*/
+	/*https://www.dafont.com/savour-pinacolada.font*/
+	font-family: Comms;
+	src: url('../fonts/comms/comms.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/comms/comms.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/comms/comms.woff') format('woff'), /* Modern Browsers */
+		 url('../fonts/comms/comms.ttf')  format('truetype'), /* Safari, Android, iOS */
+		 url('../fonts/comms/comms.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .comms {
-    font-family: Comms;
+	font-family: Comms;
 }
 
 @font-face {
-    /*Font provided by dafont.com*/
-    /*https://www.dafont.com/made-evolve-sans.font*/
-    font-family: evolveLight;
-    src: url('../fonts/evolve/light/evolveLight.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/evolve/light/evolveLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/evolve/light/evolveLight.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/evolve/light/evolveLight.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/evolve/light/evolveLight.svg#svgFontName') format('svg'); /* Legacy iOS */
+	/*Font provided by dafont.com*/
+	/*https://www.dafont.com/made-evolve-sans.font*/
+	font-family: evolveLight;
+	src: url('../fonts/evolve/light/evolveLight.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/evolve/light/evolveLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/evolve/light/evolveLight.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/evolve/light/evolveLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/evolve/light/evolveLight.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .evolveLight {
-    font-family: evolveLight;
+	font-family: evolveLight;
 }
 
 @font-face {
-    /*Font provided by dafont.com*/
-    /*https://www.dafont.com/made-evolve-sans.font*/
-    font-family: evolveBold;
-    src: url('../fonts/evolve/bold/evolveBold.eot'); /* IE9 Compat Modes */
-    src: url('../fonts/evolve/bold/evolveBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../fonts/evolve/bold/evolveBold.woff') format('woff'), /* Modern Browsers */
-    url('../fonts/evolve/bold/evolveBold.ttf')  format('truetype'), /* Safari, Android, iOS */
-    url('../fonts/evolve/bold/evolveBold.svg#svgFontName') format('svg'); /* Legacy iOS */
+	/*Font provided by dafont.com*/
+	/*https://www.dafont.com/made-evolve-sans.font*/
+	font-family: evolveBold;
+	src: url('../fonts/evolve/bold/evolveBold.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/evolve/bold/evolveBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/evolve/bold/evolveBold.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/evolve/bold/evolveBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/evolve/bold/evolveBold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 .evolveBold {
-    font-family: evolveBold;
+	font-family: evolveBold;
 }
 
 .button:hover {
-    box-shadow: inset 0 0 0 5px #EF982E;
-    background-color: transparent;
-    color: #EF982E;
-    cursor: pointer;
+	box-shadow: inset 0 0 0 5px #EF982E;
+	background-color: transparent;
+	color: #EF982E;
+	cursor: pointer;
 }
 
 .inverted:hover {
-    box-shadow: inset 0 0 0 5px #246d98;
-    color: #246d98;
+	box-shadow: inset 0 0 0 5px #246d98;
+	color: #246d98;
 }
 
 #login:hover {
-    background-image: url("../img/loginScreen/buttons/keyInverted.png");
+	background-image: url("../img/loginScreen/buttons/keyInverted.png");
 }
 
 #about:hover {
-    background-image: url("../img/aboutScreen/buttons/questionMarkInverted.png");
+	background-image: url("../img/aboutScreen/buttons/questionMarkInverted.png");
 }
 
 ::selection{
-    background-color: #EF982E;
-    color: #246d98;
+	background-color: #EF982E;
+	color: #246d98;
 }
 
 ::placeholder {
-    color: #EF982E;
-    opacity: 1;
+	color: #EF982E;
+	opacity: 1;
 }
 
 :-ms-input-placeholder, ::-ms-input-placeholder {
-    color: #EF982E;
+	color: #EF982E;
 }
 
 /*iPad landscape media query*/
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1248px) {
 
-    #logo {
-        margin-top: 50px;
-        font-size: 500px;
-    }
+	#logo {
+		margin-top: 50px;
+		font-size: 500px;
+	}
 
-    #recruit {
-        margin-left: -177.5px;
-        width: 354px;
-    }
+	#recruit {
+		margin-left: -112.5px;
+	}
 
-    #recruitScreenSubmit {
-        margin-left: -107.5px;
-    }
+	#recruitScreenSubmit {
+		margin-left: -107.5px;
+	}
 
-    .centered {
-        margin-left: -122.5px;
-    }
+	.centered {
+		margin-left: -122.5px;
+	}
 
 }
 
 /*iPad portrait media query*/
 @media only screen and (max-width: 768px) {
 
-    #logo {
-        margin-top: 125px;
-        font-size: 375px;
-    }
+	#logo {
+		margin-top: 125px;
+		font-size: 375px;
+	}
 
-    #recruit {
-        margin-left: -177.5px;
-        width: 354px;
-    }
+	#recruit {
+		margin-left: -112.5px;
+	}
 
 }
 
 /*iPhone 5.5" media query*/
 @media only screen and (max-width: 414px) {
 
-    #logo {
-        margin-top: 125px;
-        font-size: 190px;
-    }
+	#logo {
+		margin-top: 125px;
+		font-size: 190px;
+	}
 
-    #recruit {
-        margin-left: -177.5px;
-        width: 354px;
-        bottom: 150px;
-    }
+	#recruit {
+		margin-left: -125px;
+		width: 354px;
+		bottom: 150px;
+	}
 
-    #loginScreen {
-        left: 50%;
-        margin-left: -125px;
-    }
+	#loginScreen {
+		left: 50%;
+		margin-left: -125px;
+	}
 
-    #loginScreenSubmit {
-        left: 50%;
-        margin-left: -110px;
-    }
+	#loginScreenSubmit {
+		left: 50%;
+		margin-left: -110px;
+	}
 
 }
 
 /*iPhone 4.7" portrait media query*/
 @media only screen and (max-width: 375px) {
 
-    #logo {
-        margin-top: 125px;
-        font-size: 170px;
-    }
+	#logo {
+		margin-top: 125px;
+		font-size: 170px;
+	}
 
-    #recruit {
-        margin-left: -157.5px;
-        width: 315px;
-        bottom: 150px;
-    }
+	#recruit {
+		margin-left: -157.5px;
+		width: 315px;
+		bottom: 150px;
+	}
 
 }
 
 /*iPhone 4" portrait media query*/
 @media only screen and (max-width: 320px) {
 
-    #logo {
-        margin-top: 45px;
-        font-size: 145px;
-    }
+	#logo {
+		margin-top: 30px;
+		font-size: 145px;
+	}
 
-    #recruit {
-        margin-left: -130px;
-        width: 260px;
-        bottom: 150px;
-        font-size: 65px;
-    }
+	#recruit {
+		margin-left: -130px;
+		width: 260px;
+		bottom: 150px;
+		font-size: 65px;
+	}
 
-    #recruitScreen {
-        margin-left: -127.5px;
-    }
+	#recruitScreen {
+		margin-left: -127.5px;
+	}
 
-    #recruitScreenSubmit {
-        margin-left: -112.5px;
-    }
-}
-
-/*iPhone 4" portrait media query*/
-@media only screen and (max-height: 320px) {
-
-    #logo {
-        margin-top: 45px;
-        font-size: 145px;
-    }
-
-    #recruit {
-        margin-left: -130px;
-        width: 260px;
-        font-size: 65px;
-    }
+	#recruitScreenSubmit {
+		margin-left: -112.5px;
+	}
 }
 
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
-    background-color: #EF982E;
-    position: fixed;
+	background-color: #EF982E;
+	position: fixed;
+	z-index: 3;
 }
 
 .leftBorder, .rightBorder {
-    top: 0;
-    bottom: 0;
-    width: 15px;
+	top: 0;
+	bottom: 0;
+	width: 15px;
 }
 
 .topBorder, .bottomBorder {
-    left: 0;
-    right: 0;
-    height: 15px;
+	left: 0;
+	right: 0;
+	height: 15px;
 }
 
 .leftBorder {
-    left: 0;
+	left: 0;
 }
 
 .rightBorder {
-    right: 0;
+	right: 0;
 }
 
 .topBorder {
-    top: 0;
+	top: 0;
 }
 
 .bottomBorder {
-    bottom: 0;
+	bottom: 0;
 }
