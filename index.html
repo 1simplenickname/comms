@@ -51,7 +51,7 @@
 		<div id="landing">
 
 			<!--Logo-->
-			<div id="logo" class="orange"
+			<div id="logo" class="orange intoExistence"
 				 onclick="hideEverything()">
 
 				<h1 class="comms notSelectable">
@@ -61,7 +61,7 @@
 			</div>
 
 			<!--Login button-->
-			<div id="login" class="button blue square" onclick="login()"></div>
+			<div id="login" class="button blue square intoExistence" onclick="loginScreenOpen()"></div>
 			<!--Login screen-->
 			<div id="loginScreen" class="popup popupSmall blue">
 
@@ -71,9 +71,11 @@
 						<!--Username field-->
 						<input id="loginScreenUsernameField"
 							   class="field orange rectangle notSelectable evolveBold"
-							   onfocus="this.placeholder =''"
+							   onfocus="loginScreenValidation()
+							   this.placeholder =''"
 							   onblur="this.placeholder = 'USER'"
-							   type="text" placeholder="USER">
+							   type="text" placeholder="USER"
+							   onkeyup="loginScreenValidation()">
 					</div>
 					<!--Password-->
 					<div id="loginScreenPassword" class="notSelectable">
@@ -83,6 +85,7 @@
 							   onfocus="this.placeholder =''"
 							   onblur="this.placeholder = 'PASS'"
 							   type="password" placeholder="PASS"
+							   onkeyup="loginScreenValidation()" 
 							   onkeydown="loginScreenEnter()">
 					</div>
 					<!--Remember Me -->
@@ -91,7 +94,8 @@
 						<div id="rememberMeField" class="rectangle notSelectable">
 							<!--Remember Me checkbox-->
 							<div id="rememberMeCheckbox" 
-								 class="square inverted notSelectable"></div>
+								 class="square inverted notSelectable empty"
+								 onclick="rememberMe()"></div>
 							<!--Remember Me content-->
 							<div id="rememberMeContent" class="blue square evolveBold notSelectable">
 								REMEMBER ME
@@ -100,7 +104,7 @@
 					</div>
 					<!--Submit button-->
 					<div id="loginScreenSubmit"
-						 class="button orange rectangle inverted notSelectable evolveBold"
+						 class="button gray rectangle inverted notSelectable evolveBold"
 						 onclick="loginScreenSubmit()">
 							LOGIN
 					</div>
@@ -110,7 +114,7 @@
 			</div>
 
 			<!--Recruit button-->
-			<div id="recruit" class="button blue rectangle centered" onclick="recruit()">
+			<div id="recruit" class="button blue rectangle centered intoExistence" onclick="recruitScreenOpen()">
 
 				<span class="evolveBold notSelectable">
 					SIGN UP
@@ -154,7 +158,7 @@
 							   onkeyup="passwordMatch()">
 					</div>
 					<!--Strength meter-->
-					<div id="strengthMeter" class="rectangle notSelectable centered">
+					<div id="strengthMeter" class="rectangle notSelectable centered intoExistence">
 						<!--Strength meter indicator-->
 						<div id="strengthMeterShapes"
 							 class="square floated notSelectable veryWeak">
@@ -171,7 +175,7 @@
 					</div>
 					<!--Submit button-->
 					<div id="recruitScreenSubmit"
-						 class="button rectangle inverted
+						 class="button gray rectangle inverted
 								centered notSelectable evolveBold">
 						SIGN UP
 					</div>
@@ -181,7 +185,7 @@
 			</div>
 
 			<!--About button-->
-			<div id="about" class="button blue square" onclick="about()"></div>
+			<div id="about" class="button blue square intoExistence" onclick="about()"></div>
 
 		</div>
 
