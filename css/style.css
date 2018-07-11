@@ -337,8 +337,8 @@ body {
 	background-color: transparent;
 	color: #EF982E;
 	cursor: pointer;
-	transition: background-image 1000ms ease-out
-				background-color 1000ms ease-in-out
+	transition: background-image 1000ms ease-out,
+				background-color 1000ms ease-in-out,
 				color 1000ms ease-in-out;
 }
 
