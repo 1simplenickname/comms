@@ -1,30 +1,36 @@
+		/* NAVIGATION */
+
+	 /*page body styling*/
+		/*button styling*/
+	  /*input field styling*/
+ /*optimization and redundancy removal
+			styling*/
+
+	/*landing page styling*/
+		/*logo styling*/
+	/*login and loginScreen styling*/
+	/*"Remember me" field styling*/
+ /*recruit and recruitScreen styling*/
+	/*strengthMeter styling*/
+	 /*aboutScreen styling*/
+
+			/*fonts*/
+ 		/*hover styling*/
+		  /*animations*/
+	    /*media queries*/
+	    /*page borders*/
+ 	 /*mouse selection styling*/
+  /*WIP - loading animation styling*/
+
+
+/*page body styling*/
 body {
 	background-color: #246d98;
 	overflow: hidden;
 	text-align: center;
 }
 
-.orange {
-	color: #EF982E;
-}
-
-.blue {
-	color: #246d98;
-}
-
-.gray {
-	color: #7f7f7f;
-}
-
-#logo {
-	width: 100%;
-	height: 2160px;
-	margin-top: 50px;
-	font-size: 750px;
-	transition: filter 300ms ease-in-out;
-	z-index: 1;
-}
-
+/*button styling*/
 .button {
 	z-index: 2;
 	position: fixed;
@@ -37,6 +43,51 @@ body {
 				color 600ms ease-out;
 }
 
+/*input field styling*/
+.field {
+	background-color: #246d98;
+	margin-top: 15px;
+	border: 0;
+	font-size: 55px;
+	text-align: center;
+	/*Fix for iOS' Safari input field styling:*/
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+/*popup styling*/
+.popup {
+	z-index: 2;
+	visibility: hidden;
+	position: fixed;
+	background-color: #EF982E;
+}
+
+.popupSmall {
+	width: 255px;
+	height: 240px;
+}
+
+.popupLarge {
+	left: 30px;
+	top: 30px;
+	width: 1860px;
+	height: 890px;
+}
+
+/*modular classes for redundancy removal*/
+.orange {
+	color: #EF982E;
+}
+
+.blue {
+	color: #246d98;
+}
+
+.gray {
+	color: #7f7f7f;
+}
 .square {
 	width: 60px;
 	height: 60px;
@@ -66,39 +117,19 @@ body {
 	user-select: none;
 }
 
-.popup {
-	z-index: 2;
-	visibility: hidden;
-	position: fixed;
-	background-color: #EF982E;
+
+/*landing page styling*/
+/*logo styling*/
+#logo {
+	width: 100%;
+	height: 2160px;
+	margin-top: 50px;
+	font-size: 750px;
+	transition: filter 300ms ease-in-out;
+	z-index: 1;
 }
 
-.popupSmall {
-	width: 255px;
-	height: 240px;
-}
-
-.popupLarge {
-	left: 30px;
-	top: 30px;
-	width: 1860px;
-	height: 890px;
-}
-
-.field {
-	background-color: #246d98;
-	margin-top: 15px;
-	border: 0;
-	font-size: 55px;
-	text-align: center;
-	/*Fix for iOS' Safari input field styling:*/
-	-webkit-appearance: none;
-	border-radius: 0;
-	padding: 0;
-}
-
-
-/*loginScreen styling*/
+/*login and loginScreen styling*/
 #login {
 	left: 30px;
 	bottom: 30px;
@@ -126,7 +157,8 @@ body {
 
 }
 
-#remeberMe {
+/*"Remember me" field styling*/
+#rememberMe {
 
 }
 
@@ -141,10 +173,12 @@ body {
 	background-repeat: no-repeat;
 }
 
+/*empty checkbox*/
 .empty {
 	background-image: url("..");
 }
 
+/*ticked checkbox*/
 .accepted {
 	background-image: url("../img/login/loginScreen/checkmark.png");
 }
@@ -164,7 +198,7 @@ body {
 }
 
 
-/*recruitScreen styling*/
+/*recruit and recruitScreen styling*/
 #recruit {
 	bottom: 30px;
 }
@@ -277,8 +311,8 @@ body {
 }
 
 
-/*Fonts*/
-/*Comms*/
+/*fonts*/
+/*comms*/
 @font-face {
 	/*Font provided by dafont.com*/
 	/*https://www.dafont.com/savour-pinacolada.font*/
@@ -327,7 +361,7 @@ body {
 }
 
 
-/*Hover styling*/
+/*hover styling*/
 .gray:hover {
 	color: #7f7f7f;
 }
@@ -356,8 +390,7 @@ body {
 }
 
 
-/*Animations*/
-
+/*animations*/
 .intoExistence {
 	animation: intoExistence 300ms ease-in-out;
 }
@@ -373,7 +406,7 @@ body {
 	}
 }
 
-/*Input field placeholder settings*/
+/*input field placeholder settings*/
 ::placeholder {
 	color: #EF982E;
 	opacity: 1;
@@ -384,7 +417,7 @@ body {
 }
 
 
-/*Media queries*/
+/*media queries*/
 /*iPad landscape media query*/
 @media only screen and (max-width: 1248px) {
 
@@ -488,7 +521,7 @@ body {
 }
 
 
-/*Page borders*/
+/*page borders*/
 .leftBorder, .rightBorder, .topBorder, .bottomBorder {
 	background-color: #EF982E;
 	position: fixed;
@@ -523,12 +556,13 @@ body {
 	bottom: 0;
 }
 
-/*Mouse selection styling*/
+/*mouse selection styling*/
 ::selection{
 	background-color: #EF982E;
 	color: #246d98;
 }
 
+/*WIP - loading animation styling*/
 #loading {
 	margin: auto;
 	top: 50%;
@@ -605,8 +639,8 @@ body {
 	from {
 	}
 	to {
-		top: 0px;
-		left: 0px;
+		top: 0;
+		left: 0;
 		width: 60px;
 		height: 60px;
 	}

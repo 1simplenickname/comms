@@ -50,6 +50,7 @@ function toggleVisibility(target, state) {
 // hides all open menus
 function hideEverything() {
 	logo.classList.remove("blurred");
+	// checks if loginScreen is open
 	if (loginScreen.style.visibility === "visible") {
 		toggleVisibility("login", "visible");
 		login.classList.add("intoExistence");
@@ -59,6 +60,7 @@ function hideEverything() {
 		recruit.classList.add("intoExistence");
 		toggleVisibility("about", "visible");
 		about.classList.add("intoExistence");
+	//	checks if recruitScreen is open
 	} else if (recruitScreen.style.visibility === "visible") {
 		toggleVisibility("login", "visible");
 		login.classList.add("intoExistence");
@@ -68,6 +70,7 @@ function hideEverything() {
 		recruitScreen.classList.remove("intoExistence");
 		toggleVisibility("about", "visible");
 		about.classList.add("intoExistence");
+	//	checks if aboutScreen is open
 	} else {	
 		toggleVisibility("login", "visible");
 		login.classList.add("intoExistence");
@@ -78,12 +81,11 @@ function hideEverything() {
 		// toggleVisibility("aboutScreen", "hidden");
 		// about.classList.add("intoExistence");
 	}
-
 }
 
 
 // loginScreen scripts
-// opens loginScreen
+// opens and resets loginScreen
 function loginScreenOpen() {
 	loginScreenForm.reset();
 	logo.classList.add("blurred");
@@ -103,10 +105,12 @@ function loginScreenValidation() {
 	let username = document.getElementById("loginScreenUsernameField");
 	let password = document.getElementById("loginScreenPasswordField");
 	let submitButton = document.getElementById("loginScreenSubmit");
+	// checks if any of the fields are empty
 	if (username.value === null || username.value === "",
 		password.value === null || password.value === "") {
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
+	//	checks if the password is at least 6 characters long
 	} else if (password.value.length < 6){
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
@@ -150,15 +154,13 @@ function loginScreenSubmit() {
 	about.classList.add("intoExistence");
 	toggleVisibility("loginScreen", "hidden");
 	loginScreen.classList.remove("intoExistence");
-	loginScreen.reset();
 }
 
 
 // recruitScreen scripts
-// opens recruitScreen
+// opens and resets recruitScreen
 function recruitScreenOpen() {
-	loginScreenForm.reset();
-	let submitButton = document.getElementById("recruitScreenSubmit");
+	recruitScreenForm.reset();
 	logo.classList.add("blurred");
 	toggleVisibility("login", "hidden");
 	login.classList.remove("intoExistence");
@@ -267,11 +269,13 @@ function recruitScreenValidation() {
 	let password = document.getElementById("recruitScreenPasswordField");
 	let passwordRepeat = document.getElementById("recruitScreenPasswordRepeatField");
 	let submitButton = document.getElementById("recruitScreenSubmit");
+    // checks if any of the fields are empty
 	if (username.value === null || username.value === "",
 		password.value === null || password.value === "",
 		passwordRepeat.value === null || passwordRepeat.value === "") {
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
+	//	checks if the password is at least 6 characters long
 	} else if (password.value.length < 6){
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
@@ -303,7 +307,6 @@ function recruitScreenSubmit() {
 	about.classList.add("intoExistence");
 	toggleVisibility("recruitScreen", "hidden");
 	recruitScreen.classList.remove("intoExistence");
-	recruitScreenForm.reset();
 }
 
 
