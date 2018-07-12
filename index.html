@@ -5,7 +5,7 @@
 
 		<!--Performance benchmark start-->
 		<script type="text/javascript">
-			let timer = Date.now();
+			let benchmark = Date.now();
 		</script>
 
 		<title>Comms</title>
@@ -65,14 +65,13 @@
 			<!--Login screen-->
 			<div id="loginScreen" class="popup popupSmall blue">
 
-				<form id="loginScreenForm">
+				<form id="loginScreenForm" autocomplete="on">
 					<!--Username-->
 					<div id="loginScreenUsername" class="notSelectable">
 						<!--Username field-->
 						<input id="loginScreenUsernameField"
 							   class="field orange rectangle notSelectable evolveBold"
-							   onfocus="loginScreenValidation();
-							   this.placeholder =''"
+							   onfocus="this.placeholder =''"
 							   onblur="this.placeholder = 'USER'"
 							   type="text" placeholder="USER"
 							   onkeyup="loginScreenValidation()">
@@ -85,8 +84,7 @@
 							   onfocus="this.placeholder =''"
 							   onblur="this.placeholder = 'PASS'"
 							   type="password" placeholder="PASS"
-							   onkeyup="loginScreenValidation()" 
-							   onkeydown="loginScreenEnter()">
+							   onkeyup="loginScreenValidation()">
 					</div>
 					<!--Remember Me -->
 					<div id="rememberMe" class="notSelectable">
@@ -105,8 +103,7 @@
 					</div>
 					<!--Submit button-->
 					<div id="loginScreenSubmit"
-						 class="button gray rectangle inverted notSelectable evolveBold"
-						 onclick="loginScreenSubmit()">
+						 class="button gray rectangle inverted notSelectable evolveBold">
 							LOGIN
 					</div>
 
@@ -126,7 +123,7 @@
 			<!--Recruit screen-->
 			<div id="recruitScreen" class="popup popupSmall blue centered">
 
-				<form id="recruitScreenForm">
+				<form id="recruitScreenForm" autocomplete="on">
 
 					<!--Username-->
 					<div id="recruitScreenUsername" class="notSelectable">
@@ -135,7 +132,8 @@
 							   class="field orange rectangle notSelectable evolveBold"
 							   type="text" placeholder="USER"
 							   onfocus="this.placeholder =''"
-							   onblur="this.placeholder = 'USER'" >
+							   onblur="this.placeholder = 'USER'"
+							   onkeyup="recruitScreenValidation()">
 					</div>
 					<!--Password-->
 					<div id="recruitScreenPassword" class="notSelectable">
@@ -161,7 +159,7 @@
 					</div>
 					<!--Strength meter-->
 					<div id="strengthMeter"
-						 class="rectangle notSelectable centered intoExistence">
+						 class="rectangle notSelectable centered">
 						<!--Strength meter indicator-->
 						<div id="strengthMeterShapes"
 							 class="square floated notSelectable veryWeak">
@@ -184,6 +182,27 @@
 					</div>
 
 				</form>
+<!-- 
+				<div id="uploadScreen">
+					
+					<div id="uploadScreenTitle"
+						 class="rectangle notSelectable evolveBold">
+						SIGNING UP
+					</div>
+					<div id="uploadScreenLoader" 
+						 class="loadingContainer loadingContainerInverted">
+					
+						<div class="loadingElementInverted loadingR1"></div>
+						<div class="loadingElementInverted loadingR2"></div>
+						<div class="loadingElementInverted loadingL2"></div>
+						<div class="loadingElementInverted loadingL1"></div>
+
+						<div class="loadingContainerCenterInverted"></div>
+
+					 </div>
+					<div id="uploadScreenContent"></div>
+
+				</div> -->
 
 			</div>
 
@@ -213,7 +232,7 @@
 	<!--Performance benchmark end-->
 	<script type="text/javascript">
 		window.onload = function() {
-			console.log("Time until everything loaded: ", (Date.now()-timer)/1000, " seconds");
+			console.log("Time until everything loaded: ", (Date.now()-benchmark)/1000, " seconds");
 		}
 	</script>
 

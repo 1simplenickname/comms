@@ -1,26 +1,26 @@
 		/* NAVIGATION */
 
-	 /*page body styling*/
-		/*button styling*/
-	  /*input field styling*/
- /*optimization and redundancy removal
-			styling*/
+	 /* page body styling */
+		/* button styling */
+	  /* input field styling */
+ /* optimization and redundancy removal
+			styling */
 
-	/*landing page styling*/
-		/*logo styling*/
-	/*login and loginScreen styling*/
-	/*"Remember me" field styling*/
- /*recruit and recruitScreen styling*/
-	/*strengthMeter styling*/
-	 /*aboutScreen styling*/
+	/* landing page styling */
+		/* logo styling */
+ /* login and loginScreen styling */
+ /* "Remember me" field styling */
+ /* recruit and recruitScreen styling */
+	/* strengthMeter styling */
+	 /* aboutScreen styling */
 
-			/*fonts*/
- 		/*hover styling*/
-		  /*animations*/
-	    /*media queries*/
-	    /*page borders*/
- 	 /*mouse selection styling*/
-  /*WIP - loading animation styling*/
+			/* fonts */
+ 		/* hover styling */
+		 /* animations */
+	    /* media queries */
+	    /* page borders */
+ 	 /* mouse selection styling */
+  /* WIP - loading animation styling */
 
 
 /*page body styling*/
@@ -100,6 +100,10 @@ body {
 
 .blurred {
 	filter: blur(25px);
+	-webkit-filter: blur(25px);
+	-moz-filter: blur(25px);
+	-o-filter: blur(25px);
+	-ms-filter: blur(25px);
 }
 
 .inverted {
@@ -133,7 +137,7 @@ body {
 #login {
 	left: 30px;
 	bottom: 30px;
-	background-image: url("../img/login/keyNormal.png");
+	background-image: url("../img/landingPage/login/keyNormal.png");
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -180,7 +184,7 @@ body {
 
 /*ticked checkbox*/
 .accepted {
-	background-image: url("../img/login/loginScreen/checkmark.png");
+	background-image: url("../img/landingPage/login/loginScreen/checkmark.png");
 }
 
 #rememberMeContent {
@@ -301,11 +305,35 @@ body {
 }
 
 
+/*uploadScreen styling*/
+#uploadScreen {
+
+}
+
+#uploadScreenTitle {
+	top: 15px;
+	left: 15px;
+	font-size: 40px;
+	vertical-align: middle;
+	line-height: 58px;
+	position: absolute;
+}
+
+#uploadScreenContent {
+
+}
+
+#uploadScreenLoader {
+	position: absolute;
+	background-color: white;
+}
+
+
 /*aboutScreen styling*/
 #about {
 	right: 30px;
 	bottom: 30px;
-	background-image: url("../img/about/questionMarkNormal.png");
+	background-image: url("../img/landingPage/about/questionMarkNormal.png");
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -371,9 +399,9 @@ body {
 	background-color: transparent;
 	color: #EF982E;
 	cursor: pointer;
-	transition: background-image 1000ms ease-out,
-				background-color 1000ms ease-in-out,
-				color 1000ms ease-in-out;
+	transition: background-image 600ms ease-out,
+				background-color 600ms ease-in-out,
+				color 600ms ease-in-out;
 }
 
 .inverted:hover {
@@ -382,11 +410,11 @@ body {
 }
 
 #login:hover {
-	background-image: url("../img/login/keyInverted.png");
+	background-image: url("../img/landingPage/login/keyInverted.png");
 }
 
 #about:hover {
-	background-image: url("../img/about/questionMarkInverted.png");
+	background-image: url("../img/landingPage/about/questionMarkInverted.png");
 }
 
 
@@ -424,6 +452,7 @@ body {
 	#logo {
 		margin-top: 50px;
 		font-size: 500px;
+		height: 768px;
 	}
 
 	#recruit {
@@ -446,6 +475,7 @@ body {
 	#logo {
 		margin-top: 125px;
 		font-size: 375px;
+		height: 1024px;
 	}
 
 	#recruit {
@@ -460,6 +490,7 @@ body {
 	#logo {
 		margin-top: 125px;
 		font-size: 190px;
+		height: 736px;
 	}
 
 	#recruit {
@@ -486,6 +517,7 @@ body {
 	#logo {
 		margin-top: 125px;
 		font-size: 170px;
+		height: 667px;
 	}
 
 	#recruit {
@@ -502,6 +534,7 @@ body {
 	#logo {
 		margin-top: 30px;
 		font-size: 145px;
+		height: 568px;
 	}
 
 	#recruit {
@@ -563,7 +596,9 @@ body {
 }
 
 /*WIP - loading animation styling*/
-#loading {
+.loadingContainerNormal {
+	width: 75px;
+	height: 75px;
 	margin: auto;
 	top: 50%;
 	left: 50%;
@@ -573,75 +608,139 @@ body {
 	vertical-align: middle;
 }
 
-#topRight, #bottomRight, #bottomLeft, #topLeft {
-	background-color: #246d98; 
+.loader {
+	width: 75px;
+	height: 75px;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+	/*background-color: #EF982E;*/
+	vertical-align: middle;
+	visibility: visible;
+}
+
+.loadingElement {
 	position: absolute;
 	width: 10px;
 	height: 10px;
 	visibility: hidden;
 }
 
-#topRight {
-	right: 5px;
-	top: 5px;
-	animation: sides 1000ms forwards;
+.loadingElementNormal {
+	background-color: #246d98; 
 }
 
-#bottomRight {
-	right: 5px;
-	bottom: 5px;
-	animation: caps 1000ms forwards 1000ms;
+.loadingElementInverted {
+	background-color: #EF982E;
 }
 
-#bottomLeft {
+.loadingL1, .loadingL2 {
 	left: 5px;
-	bottom: 5px;
-	animation: sides 1000ms forwards 2000ms;
 }
 
-#topLeft {
-	left: 5px;
+.loadingR1, .loadingR2 {
+	right: 5px;
+}
+
+.loadingL1, .loadingR1 {
 	top: 5px;
-	animation: caps 1000ms forwards 3000ms;
 }
 
-#finishedSquare {
+.loadingL2, .loadingR2 {
+	bottom: 5px;
+}
+
+.loadingR1 {
+	animation: drawSides 500ms forwards,
+			   disappear 10ms forwards 2500ms;
+}
+
+.loadingR2 {
+	animation: drawCaps 500ms forwards 500ms,
+			   disappear 10ms forwards 2500ms;
+}
+
+.loadingL2 {
+	animation: drawSides 500ms forwards 1000ms,
+			   disappear 10ms forwards 2500ms;
+}
+
+.loadingL1 {
+	animation: drawCaps 500ms forwards 1500ms,
+			   disappear 10ms forwards 2500ms;
+}
+
+.loadingContainerCenterNormal {
 	position: fixed;
 	top: 15px;
-	left: 15px;
-	width: 30px;
-	height: 30px;
-	background-color: #EF982E;
-	animation: grow 1000ms forwards 4000ms;
+	right: 15px;
+	width: 45px;
+	height: 45px;
+	animation: growNormal 500ms forwards 2000ms,
+			   pheonix 500ms forwards 2600ms;
 }
 
-@keyframes sides {
-	from {
-		height: 10px;
-	}
+.loadingContainerCenterInverted {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	width: 45px;
+	height: 45px;
+	animation: growInverted 500ms forwards 2000ms,
+			   pheonix 500ms forwards 2600ms;
+}
+
+@keyframes drawSides {
 	to {
-		height: 50px;
+		height: 65px;
 		visibility: visible;
 	}
 }
 
-@keyframes caps {
-	from {
+@keyframes drawCaps {
+	to {
+		width: 65px;
+		visibility: visible;
+	}
+}
+
+@keyframes growNormal {
+	0% {
+		background-color: #EF982E;
+	}
+	100% {
+		background-color: #246d98;
+		top: 5px;
+		right: 5px;
+		width: 65px;
+		height: 65px;
+	}
+}
+
+@keyframes growInverted {
+	0% {
+		background-color: #246d98;
+	}
+	100% {
+		background-color: #EF982E;
+		top: 5px;
+		right: 5px;
+		width: 65px;
+		height: 65px;
+	}
+}
+
+@keyframes disappear {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes pheonix {
+	to {
 		width: 10px;
-	}
-	to {
-		width: 50px;
-		visibility: visible;
-	}
-}
-
-@keyframes grow {
-	from {
-	}
-	to {
-		top: 0;
-		left: 0;
-		width: 60px;
-		height: 60px;
+		height: 10px;
 	}
 }

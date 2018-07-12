@@ -19,13 +19,14 @@
 	// passwordStrength() //
 	// strengthMeterShow() //
 	 // strengthMeterHide //
-	// passwordMatch() //
-	// recruitScreenValidation() //
+	  // passwordMatch() //
+  // recruitScreenValidation() //
 	// recruitScreenEnter() //
 	// recruitScreenSubmit() //
 
 	// aboutScreen scripts //
 		// about() //
+
 
 // global variables
 let logo = document.getElementById("logo");
@@ -36,6 +37,7 @@ let recruit = document.getElementById("recruit");
 let recruitScreen = document.getElementById("recruitScreen");
 let recruitScreenForm = document.getElementById("recruitScreenForm");
 let strengthMeter = document.getElementById("strengthMeter");
+let shape = document.getElementById("strengthMeterShapes");
 let about = document.getElementById("about");
 
 
@@ -106,15 +108,14 @@ function loginScreenValidation() {
 	let password = document.getElementById("loginScreenPasswordField");
 	let submitButton = document.getElementById("loginScreenSubmit");
 	// checks if any of the fields are empty
-	if (username.value === null || username.value === "",
-		password.value === null || password.value === "") {
+	if ((username.value === null || username.value === "") ||
+		(password.value === null || password.value === "") ||
+		password.value.length < 6) {
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
-	//	checks if the password is at least 6 characters long
-	} else if (password.value.length < 6){
-		submitButton.classList.add("gray");
-		submitButton.classList.remove("orange");
-	} else {
+	} else if ((username.value !== null || username.value !== "") &&
+		(password.value !== null || password.value !== "") &&
+		!(password.value.length < 6)){
 		submitButton.classList.add("orange");
 		submitButton.classList.remove("gray");
 		loginScreenEnter();
@@ -128,11 +129,11 @@ function loginScreenValidation() {
 function rememberMe() {
 	let box = document.getElementById("rememberMeCheckbox");
 	if (box.classList.contains("empty")) {
-		box.classList.add("accepted");
 		box.classList.remove("empty");
+		box.classList.add("accepted");
 	} else {
-		box.classList.add("empty");
 		box.classList.remove("accepted");
+		box.classList.add("empty");
 	}
 }
 
@@ -175,7 +176,6 @@ function recruitScreenOpen() {
 // checks if the password in recruitScreen is secure
 function passwordStrength() {
 	let password = document.getElementById("recruitScreenPasswordField");
-	let shape = document.getElementById("strengthMeterShapes");
 	let content = document.getElementById("strengthMeterContent");
 	let strength = 0;
 	// checks if the password contains any letters
@@ -236,7 +236,6 @@ function passwordStrength() {
 
 // opens strengthMeter
 function strengthMeterShow() {
-	let shape = document.getElementById("strengthMeterShapes");
 	shape.className = "veryWeak";
 	toggleVisibility("strengthMeter", "visible");
 	strengthMeter.classList.add("intoExistence");
@@ -244,7 +243,6 @@ function strengthMeterShow() {
 
 // closes strengthMeter
 function strengthMeterHide() {
-	let shape = document.getElementById("strengthMeterShapes");
 	shape.className = "none";
 	toggleVisibility("strengthMeter", "hidden");
 	strengthMeter.classList.remove("intoExistence");
@@ -270,16 +268,16 @@ function recruitScreenValidation() {
 	let passwordRepeat = document.getElementById("recruitScreenPasswordRepeatField");
 	let submitButton = document.getElementById("recruitScreenSubmit");
     // checks if any of the fields are empty
-	if (username.value === null || username.value === "",
-		password.value === null || password.value === "",
-		passwordRepeat.value === null || passwordRepeat.value === "") {
+	if ((username.value === null || username.value === "") ||
+		(password.value === null || password.value === "") ||
+		(passwordRepeat.value === null || passwordRepeat.value === "") ||
+		password.value.length < 6) {
 		submitButton.classList.add("gray");
 		submitButton.classList.remove("orange");
-	//	checks if the password is at least 6 characters long
-	} else if (password.value.length < 6){
-		submitButton.classList.add("gray");
-		submitButton.classList.remove("orange");
-	} else {
+	} else if ((username.value !== null || username.value !== "") &&
+		(password.value !== null || password.value !== "") &&
+		(passwordRepeat.value !== null || passwordRepeat.value !== "") &&
+		!(password.value.length < 6)){
 		submitButton.classList.add("orange");
 		submitButton.classList.remove("gray");
 		recruitScreenEnter();
@@ -287,6 +285,16 @@ function recruitScreenValidation() {
 			recruitScreenSubmit()
 		};
 	}
+}
+
+// uploadScreen scripts
+// opens uploadScreen
+function uploadScreen() {
+	toggleVisibility("recruitScreenUsername", "hidden");
+	toggleVisibility("recruitScreenPassword", "hidden");
+	toggleVisibility("recruitScreenPasswordRepeat", "hidden");
+	toggleVisibility("strengthMeter", "hidden");
+	toggleVisibility("recruitScreenSubmit", "hidden");
 }
 
 // closes recruitScreen using the keyboard
